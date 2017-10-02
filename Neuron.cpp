@@ -3,6 +3,16 @@
 #include <iostream>
 #include <cmath>
 
+//CONSTANTES
+const double Iext (10);
+std::ofstream pikeStorageout("pikeStorage.dat",std::ios::app);
+//std::ifstream pikeStoragein("pikeStorage.dat",std::ios::in);
+const int h (1);
+const double tau(20);
+const double R(1);
+const double tStart(0);
+const double tStop(100);
+
 Neuron:: Neuron (double V)
 :potentiel (V) , isRefractory(false)
 {}
@@ -37,7 +47,10 @@ void Neuron:: update (double a,double b)
 		else if (potentiel >= -30)
 		{
 			storeSpike(pikeStorageout,time);
+			spikesTime.push_back(time);
 			isRefractory = true;
+			std::cout<<"temps :"<<time<<std::endl;
+			std::cout<<"V :"<<potentiel<<std::endl;
 			
 		}
 		if(a <= time and b >= time )
@@ -49,6 +62,7 @@ void Neuron:: update (double a,double b)
 			
 		}
 		time += h;
+
 		
 	};
 	
@@ -63,3 +77,7 @@ void Neuron:: updatePotential (const double & time)
 {
 	potentiel = exp(-h/tau)*potentiel;
 }
+/*void Neuron:: displayNeuron()
+{
+	std::cout<<"V: " potentiel
+}*/

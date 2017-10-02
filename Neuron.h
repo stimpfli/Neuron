@@ -5,16 +5,6 @@
 #include <iostream>
 #include <vector>
 
-//CONSTANTES:
-const double Iext (10);
-std::ofstream pikeStorageout("pikeStorage.dat",std::ios::app);
-//std::ifstream pikeStoragein("pikeStorage.dat",std::ios::in);
-const int h (1);
-const double tau(20);
-const double R(1);
-const double tStart(0);
-const double tStop(100);
-
 //CLASSES:
  
 class Neuron 
@@ -25,6 +15,8 @@ class Neuron
 	int nbSpikes;
 	std::vector<double> spikesTime;
 	bool isRefractory ;
+	void updatePotentialAB (const double & time);
+	void updatePotential (const double & time);
 		
 		
 	public:
@@ -32,8 +24,7 @@ class Neuron
 	double getPotentiel();
 	int getNbSpikes ();
 	void update (double a,double b);
-	void updatePotentialAB (const double & time);
-	void updatePotential (const double & time);
+	//void displayNeuron();
 	};
 	
 #endif	

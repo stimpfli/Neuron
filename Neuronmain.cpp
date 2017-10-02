@@ -1,4 +1,4 @@
-#include "Neuron.cpp"
+#include "Neuron.h"
 #include <iostream>
 using namespace std;
 
@@ -10,4 +10,7 @@ int main()
 	cin>>a;
 	cout<<"Entrez la borne sup du temps de simulation : b = "<<endl;
 	cin>>b;
+	Neuron n1(-60);
+	n1.update(a,b);
+	
 }

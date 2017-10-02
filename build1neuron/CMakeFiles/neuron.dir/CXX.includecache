@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.cpp
+Neuron.h
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.h
+string
+-
+iostream
+-
+cmath
+-
+
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.h
+fstream
+-
+iostream
+-
+vector
+-
+
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuronmain.cpp
+Neuron.h
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.h
+iostream
+-
+
