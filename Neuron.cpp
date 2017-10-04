@@ -8,49 +8,54 @@ const double Iext (10);
 std::ofstream pikeStorageout("pikeStorage.dat",std::ios::app);
 //std::ifstream pikeStoragein("pikeStorage.dat",std::ios::in);
 const int h (1);
-const double tau(20);
-const double R(1);
+const double Taue(20);
+const double R(10);
 const double tStart(0);
-const double tStop(100);
+const double tStop(10);
+const double Vref(10);
+const double Teta(20);
+const double Taurps(2);
 
 Neuron:: Neuron (double V)
 :potentiel (V) , isRefractory(false)
 {}
 
-void Neuron:: storeSpike (std::ofstream& pikeStorage, double time)
+void Neuron:: storeSpike (std::ofstream& pikeStorage,const double & time)const
 {
 	pikeStorage<<potentiel ;
+	pikeStorage<<"  ";
 	pikeStorage<<time<<std::endl;
-	++nbSpikes;
 }
 
-int Neuron:: getNbSpikes ()
+int Neuron:: getNbSpikes () const
 {
 	return nbSpikes;
 }
 
-double Neuron:: getPotentiel()
+double Neuron:: getPotentiel()const
 {
 	return potentiel;
 }
 
-void Neuron:: update (double a,double b)
+void Neuron:: update (const double & a ,const double & b)
 {
 	double time (tStart);
 	while (time < tStop)
 	{
 		if (isRefractory )
 			{
-				potentiel = -60;
+				potentiel = Vref;
 				isRefractory=false;
+			/*std::cout<<"temps :"<<time<<std::endl;
+			std::cout<<"V :"<<potentiel<<std::endl;*/
 			}
-		else if (potentiel >= -30)
+		else if (potentiel >= Teta )
 		{
 			storeSpike(pikeStorageout,time);
 			spikesTime.push_back(time);
 			isRefractory = true;
-			std::cout<<"temps :"<<time<<std::endl;
-			std::cout<<"V :"<<potentiel<<std::endl;
+			++nbSpikes;
+
 			
 		}
 		if(a <= time and b >= time )
@@ -62,6 +67,7 @@ void Neuron:: update (double a,double b)
 			
 		}
 		time += h;
+		displayNeuron();
 
 		
 	};
@@ -70,14 +76,18 @@ void Neuron:: update (double a,double b)
 
 void Neuron:: updatePotentialAB (const double & time)
 {
-	potentiel = exp(-h/tau)*potentiel + Iext*R*(1-exp(-h/tau));
+	potentiel = exp(-h/Taue)*potentiel + Iext*R*(1-exp(-h/Taue));
 }
 
 void Neuron:: updatePotential (const double & time)
 {
-	potentiel = exp(-h/tau)*potentiel;
+	potentiel = exp(-h/Taue)*potentiel;
 }
-/*void Neuron:: displayNeuron()
+void Neuron:: displayNeuron() const
 {
-	std::cout<<"V: " potentiel
-}*/
+	std::cout<<"V: " <<potentiel<<std::endl;
+	if (isRefractory)
+	{
+		std::cout<<" is Refractory"<<std::endl;
+	}
+}

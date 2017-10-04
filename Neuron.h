@@ -11,7 +11,7 @@ class Neuron
 {
 	private:
 	double potentiel;  
-	void storeSpike (std::ofstream& pikeStorage, double time);
+	void storeSpike (std::ofstream& pikeStorage,const double& time)const;
 	int nbSpikes;
 	std::vector<double> spikesTime;
 	bool isRefractory ;
@@ -20,11 +20,11 @@ class Neuron
 		
 		
 	public:
-	Neuron (double V );
-	double getPotentiel();
-	int getNbSpikes ();
-	void update (double a,double b);
-	//void displayNeuron();
+	Neuron (double V = -60);
+	double getPotentiel() const ;
+	int getNbSpikes () const;
+	void update (const double & a ,const double & b ) ;
+	void displayNeuron() const ;
 	};
 	
 #endif	
