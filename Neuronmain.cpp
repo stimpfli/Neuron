@@ -34,7 +34,6 @@ int main()
 				for (size_t y (1);y < neurons[i].size();++y)
 				{
 					neurons[i][y]->receive(D+t);
-					cout<<"	t "<<t<<endl;
 				}
 				
 			}

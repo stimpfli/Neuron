@@ -24,6 +24,7 @@ class Neuron
 	double iExt;
 	std::vector<int> ringBuffer ;
 	int stimule();
+	std::string name;
 	
 		
 		
@@ -37,8 +38,8 @@ class Neuron
 	void setIExt(double I);
 	void storeSpike (std::ofstream& pikeStorage)const;
 	void receive(int deliveryTime);
-	std::string name;
 	void displayBuffer ()const;
+	std::string getName()const;
 	};
 	
 #endif	
