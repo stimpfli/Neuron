@@ -4,6 +4,11 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
+#include <string>
+
+//CONSTANTES
+const double Vref(0);
+const int D(3);
 
 //CLASSES:
  
@@ -11,20 +16,29 @@ class Neuron
 {
 	private:
 	double potentiel;  
-	void storeSpike (std::ofstream& pikeStorage,const double& time)const;
 	int nbSpikes;
-	std::vector<double> spikesTime;
-	bool isRefractory ;
-	void updatePotentialAB (const double & time);
-	void updatePotential (const double & time);
+	long tSpike;
+	void updatePotential ();
+	void storeSpikeTime ();
+	int time;
+	double iExt;
+	std::vector<int> ringBuffer ;
+	int stimule();
+	
 		
 		
 	public:
-	Neuron (double V = -60);
+	Neuron (double V , std::string name );
 	double getPotentiel() const ;
 	int getNbSpikes () const;
-	void update (const double & a ,const double & b ) ;
+	bool update (long steps) ;
 	void displayNeuron() const ;
+	double getIExt ()const;
+	void setIExt(double I);
+	void storeSpike (std::ofstream& pikeStorage)const;
+	void receive(int deliveryTime);
+	std::string name;
+	void displayBuffer ()const;
 	};
 	
 #endif	

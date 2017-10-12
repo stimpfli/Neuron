@@ -23,6 +23,8 @@ iostream
 -
 vector
 -
+string
+-
 
 /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuronmain.cpp
 Neuron.h

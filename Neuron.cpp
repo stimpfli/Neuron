@@ -4,26 +4,24 @@
 #include <cmath>
 
 //CONSTANTES
-const double Iext (10);
-std::ofstream pikeStorageout("pikeStorage.dat",std::ios::app);
-//std::ifstream pikeStoragein("pikeStorage.dat",std::ios::in);
-const int h (1);
+const double h (0.1);
 const double Taue(20);
-const double R(10);
+const double R(20);
 const double tStart(0);
-const double tStop(10);
-const double Vref(10);
 const double Teta(20);
-const double Taurps(2);
+const double Taurps(0.2);
+const long refractorySteps(Taurps/h);
+const int J(1);
 
-Neuron:: Neuron (double V)
-:potentiel (V) , isRefractory(false)
+
+Neuron:: Neuron (double V , std::string name)
+:potentiel (V),tSpike(0),time(tStart) , ringBuffer(D+1,0), name(name)
 {}
 
-void Neuron:: storeSpike (std::ofstream& pikeStorage,const double & time)const
+void Neuron:: storeSpike (std::ofstream& pikeStorage)const
 {
 	pikeStorage<<potentiel ;
-	pikeStorage<<"  ";
+	pikeStorage<<"  "<<name<<"	";
 	pikeStorage<<time<<std::endl;
 }
 
@@ -37,57 +35,95 @@ double Neuron:: getPotentiel()const
 	return potentiel;
 }
 
-void Neuron:: update (const double & a ,const double & b)
+bool Neuron:: update (long steps)
 {
-	double time (tStart);
+	if (steps == 0){return false;}
+	bool spikes (false);
+	const long tStop(time + steps);
+	//std::cout<<name<<"  "<< ringBuffer[0]<<ringBuffer[1]<<ringBuffer[2]<<ringBuffer[3]<<"	rang "<<time % (D+1)<<"	p "<<potentiel<<"	1"<<std::endl;	
+	
 	while (time < tStop)
 	{
-		if (isRefractory )
-			{
-				potentiel = Vref;
-				isRefractory=false;
-			/*std::cout<<"temps :"<<time<<std::endl;
-			std::cout<<"V :"<<potentiel<<std::endl;*/
-			}
-		else if (potentiel >= Teta )
+		if (potentiel >= Teta )
 		{
-			storeSpike(pikeStorageout,time);
-			spikesTime.push_back(time);
-			isRefractory = true;
+			storeSpikeTime();
 			++nbSpikes;
-
-			
+			spikes =true;
+			std::cout <<"Spike	"<<name<<"	"<<time<<std::endl;
 		}
-		if(a <= time and b >= time )
+		if (tSpike > 0 and time - tSpike < refractorySteps )
 		{
-			updatePotentialAB(time);
-		}
+		 potentiel = 0;	
+		 std::cout<<"Refractory  "<<std::endl;
+		}	
 		else 
 		{
-			
-		}
-		time += h;
-		displayNeuron();
-
+			updatePotential();
 		
+		std::cout<<"Icrease  "<<std::endl;
+
+		}
+		displayBuffer();
+		std::cout<<name<<"  "<< ringBuffer[0]<<ringBuffer[1]<<ringBuffer[2]<<ringBuffer[3]<<"	rang "<<time % (D+1)<<"	p "<<potentiel<<"	2"<<std::endl;
+		++time;
 	};
+	return spikes;
 	
 }
 
-void Neuron:: updatePotentialAB (const double & time)
+void Neuron:: updatePotential ()
 {
-	potentiel = exp(-h/Taue)*potentiel + Iext*R*(1-exp(-h/Taue));
+	int stimulus (0);
+	stimulus = stimule();
+	potentiel = exp(-h/Taue)*potentiel + iExt*R*(1-exp(-h/Taue)) + stimulus*J;
+	if (stimulus > 0)
+			{
+				std::cout<<stimulus<<"stimule"<<tSpike<<"	"<<time<<std::endl;
+			}
 }
 
-void Neuron:: updatePotential (const double & time)
-{
-	potentiel = exp(-h/Taue)*potentiel;
-}
 void Neuron:: displayNeuron() const
 {
 	std::cout<<"V: " <<potentiel<<std::endl;
-	if (isRefractory)
+	
+}
+
+void Neuron:: storeSpikeTime ()
+{
+	tSpike = time;
+}
+
+double Neuron:: getIExt ()const
+{
+	return iExt;
+}
+
+void Neuron:: setIExt(double I)
+{
+	iExt = I;
+}
+
+void Neuron:: receive(int deliveryTime)
+{
+	++ringBuffer[deliveryTime % (D+1)];
+	std::cout << "receive1  "<<name<<"	"<<deliveryTime % (D+1)<<"	"<<ringBuffer[0]<<ringBuffer[1]<<ringBuffer[2]<<ringBuffer[3];
+	
+}
+
+int Neuron:: stimule()
+{
+	int t(time);
+	int tpm (0);
+	tpm = ringBuffer[t % (D+1)];
+	
+	if(ringBuffer[t % (D+1)] > 0)
 	{
-		std::cout<<" is Refractory"<<std::endl;
+		ringBuffer[t % (D+1)] = 0;
 	}
+	return tpm ;
+}
+
+void Neuron:: displayBuffer ()const
+{
+	std::cout<<name<<" display "<< ringBuffer[0]<<ringBuffer[1]<<ringBuffer[2]<<ringBuffer[3]<<std::endl;
 }
