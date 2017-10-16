@@ -77,7 +77,7 @@ bool Neuron:: update (long steps , int i)
 			storeSpikeTime();
 			++nbSpikes;
 			spikes =true;
-			std::cout <<"Spike	n"<<i<<"	"<<time*0.1<<"ms"<<std::endl;
+			//std::cout <<"Spike	n"<<i<<"	"<<time*0.1<<"ms"<<std::endl;
 		}
 		if (tSpike > 0 and time - tSpike < refractorySteps )
 		{
@@ -148,6 +148,14 @@ double Neuron:: getIExt ()const
 void Neuron:: setIExt(double I)
 {
 	iExt = I;
+}
+
+/*
+ * RETOURNE LE TEMPS RÉEL DU DERNIER SPIKE 
+ */
+ double Neuron:: getTSpike() const
+{
+	return tSpike*h;
 }
 /*
  * GERE LA RECEPTION DU STIMULUS ET ENREGISTRE DANS LE BUFFER CE DERNIER

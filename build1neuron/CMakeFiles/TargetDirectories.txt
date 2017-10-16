@@ -1,1 +1,6 @@
 /home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron/CMakeFiles/neuron.dir
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron/gtest/googlemock/gtest/CMakeFiles/gtest.dir
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron/gtest/googlemock/CMakeFiles/gmock.dir
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron/CMakeFiles/neurontest.dir
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron/gtest/googlemock/CMakeFiles/gmock_main.dir

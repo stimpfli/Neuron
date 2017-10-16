@@ -32,12 +32,13 @@ class Neuron
 		
 		
 	public:
-	Neuron (double V );
+	Neuron (double V = 0.0 );
 	double getPotentiel() const ;
 	int getNbSpikes () const;
-	bool update (long steps , int i ) ;
+	bool update (long steps , int i =0 ) ;
 	void displayNeuron() const ;
 	double getIExt ()const;
+	double getTSpike() const;
 	void setIExt(double I);
 	void storeSpike (std::ofstream& pikeStorage, int i )const;
 	void receive(int deliveryTime);

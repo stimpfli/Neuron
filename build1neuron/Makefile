@@ -42,13 +42,23 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/INTRANET/stimpfli/myfiles/cpp/Neuron
+CMAKE_SOURCE_DIR = /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+.PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -69,6 +79,47 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -114,12 +165,78 @@ neuron/fast:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/build
 .PHONY : neuron/fast
 
+#=============================================================================
+# Target rules for targets named neurontest
+
+# Build rule for target.
+neurontest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 neurontest
+.PHONY : neurontest
+
+# fast build rule for target.
+neurontest/fast:
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/build
+.PHONY : neurontest/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
 Network.o: Network.cpp.o
 .PHONY : Network.o
 
 # target to build an object file
 Network.cpp.o:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.o
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Network.cpp.o
 .PHONY : Network.cpp.o
 
 Network.i: Network.cpp.i
@@ -128,6 +245,7 @@ Network.i: Network.cpp.i
 # target to preprocess a source file
 Network.cpp.i:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.i
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Network.cpp.i
 .PHONY : Network.cpp.i
 
 Network.s: Network.cpp.s
@@ -136,6 +254,7 @@ Network.s: Network.cpp.s
 # target to generate assembly for a file
 Network.cpp.s:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.s
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Network.cpp.s
 .PHONY : Network.cpp.s
 
 Neuron.o: Neuron.cpp.o
@@ -144,6 +263,7 @@ Neuron.o: Neuron.cpp.o
 # target to build an object file
 Neuron.cpp.o:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Neuron.cpp.o
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Neuron.cpp.o
 .PHONY : Neuron.cpp.o
 
 Neuron.i: Neuron.cpp.i
@@ -152,6 +272,7 @@ Neuron.i: Neuron.cpp.i
 # target to preprocess a source file
 Neuron.cpp.i:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Neuron.cpp.i
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Neuron.cpp.i
 .PHONY : Neuron.cpp.i
 
 Neuron.s: Neuron.cpp.s
@@ -160,6 +281,7 @@ Neuron.s: Neuron.cpp.s
 # target to generate assembly for a file
 Neuron.cpp.s:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Neuron.cpp.s
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Neuron.cpp.s
 .PHONY : Neuron.cpp.s
 
 Neuronmain.o: Neuronmain.cpp.o
@@ -186,15 +308,49 @@ Neuronmain.cpp.s:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Neuronmain.cpp.s
 .PHONY : Neuronmain.cpp.s
 
+neurontest.o: neurontest.cpp.o
+.PHONY : neurontest.o
+
+# target to build an object file
+neurontest.cpp.o:
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/neurontest.cpp.o
+.PHONY : neurontest.cpp.o
+
+neurontest.i: neurontest.cpp.i
+.PHONY : neurontest.i
+
+# target to preprocess a source file
+neurontest.cpp.i:
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/neurontest.cpp.i
+.PHONY : neurontest.cpp.i
+
+neurontest.s: neurontest.cpp.s
+.PHONY : neurontest.s
+
+# target to generate assembly for a file
+neurontest.cpp.s:
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/neurontest.cpp.s
+.PHONY : neurontest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
 	@echo "... neuron"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... neurontest"
+	@echo "... test"
+	@echo "... install/local"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... Network.o"
 	@echo "... Network.i"
 	@echo "... Network.s"
@@ -204,6 +360,9 @@ help:
 	@echo "... Neuronmain.o"
 	@echo "... Neuronmain.i"
 	@echo "... Neuronmain.s"
+	@echo "... neurontest.o"
+	@echo "... neurontest.i"
+	@echo "... neurontest.s"
 .PHONY : help
 
 

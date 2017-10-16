@@ -4,6 +4,10 @@
 std::ofstream pikeStorageout("pikeStorage.dat",std::ios::app); //dossier stockage
 
 //CONSTRUCTEUR
+/*
+ * CONSTRUIT LES LIENS ENTRE LES NEURONES TABLES DE CORRES 
+ * CONSTRUIT TOUS LES NEURONES DE LA SIMULATION 
+ */
 
 Network:: Network ()
  : linked (NbNeuron , std::vector<bool>(NbNeuron , false )) , t(0)
@@ -13,6 +17,9 @@ Network:: Network ()
 	linked[0][1] = true;
 }
 
+/*
+ * DIRIGE TOUTE LA SIMULATION A TRAVERS TOUS LES NEURONES
+ */
 void Network:: update()
 {
 	double iStart(1000);

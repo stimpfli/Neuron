@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.cpp
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.cpp
 Network.h
-/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.h
 iostream
 -
 
-/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.h
 Neuron.h
-/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.h
 vector
 -
 
-/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.cpp
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.cpp
 Neuron.h
-/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.h
 string
 -
 iostream
@@ -28,7 +28,7 @@ iostream
 cmath
 -
 
-/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.h
 fstream
 -
 iostream
@@ -38,9 +38,9 @@ vector
 string
 -
 
-/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuronmain.cpp
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuronmain.cpp
 Neuron.h
-/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.h
 Network.h
-/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.h
 
