@@ -114,6 +114,30 @@ neuron/fast:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/build
 .PHONY : neuron/fast
 
+Network.o: Network.cpp.o
+.PHONY : Network.o
+
+# target to build an object file
+Network.cpp.o:
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.o
+.PHONY : Network.cpp.o
+
+Network.i: Network.cpp.i
+.PHONY : Network.i
+
+# target to preprocess a source file
+Network.cpp.i:
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.i
+.PHONY : Network.cpp.i
+
+Network.s: Network.cpp.s
+.PHONY : Network.s
+
+# target to generate assembly for a file
+Network.cpp.s:
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.s
+.PHONY : Network.cpp.s
+
 Neuron.o: Neuron.cpp.o
 .PHONY : Neuron.o
 
@@ -171,6 +195,9 @@ help:
 	@echo "... neuron"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Network.o"
+	@echo "... Network.i"
+	@echo "... Network.s"
 	@echo "... Neuron.o"
 	@echo "... Neuron.i"
 	@echo "... Neuron.s"

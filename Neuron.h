@@ -7,8 +7,11 @@
 #include <string>
 
 //CONSTANTES
-const double Vref(0);
-const int D(3);
+const double Vref(0);//mV
+const double D(1.5);//ms
+const double h (0.1);//ms
+const long int DelaySteps(D/h);//steps
+
 
 //CLASSES:
  
@@ -24,22 +27,21 @@ class Neuron
 	double iExt;
 	std::vector<int> ringBuffer ;
 	int stimule();
-	std::string name;
+
 	
 		
 		
 	public:
-	Neuron (double V , std::string name );
+	Neuron (double V );
 	double getPotentiel() const ;
 	int getNbSpikes () const;
-	bool update (long steps) ;
+	bool update (long steps , int i ) ;
 	void displayNeuron() const ;
 	double getIExt ()const;
 	void setIExt(double I);
-	void storeSpike (std::ofstream& pikeStorage)const;
+	void storeSpike (std::ofstream& pikeStorage, int i )const;
 	void receive(int deliveryTime);
-	void displayBuffer ()const;
-	std::string getName()const;
+	void displayBuffer (int i)const;
 	};
 	
 #endif	

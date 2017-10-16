@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.cpp
+Network.h
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.h
+iostream
+-
+
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.h
+Neuron.h
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.h
+vector
+-
+
 /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.cpp
 Neuron.h
 /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.h
@@ -29,6 +41,6 @@ string
 /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuronmain.cpp
 Neuron.h
 /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.h
-iostream
--
+Network.h
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.h
 

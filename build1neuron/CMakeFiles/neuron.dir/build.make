@@ -95,16 +95,41 @@ CMakeFiles/neuron.dir/Neuronmain.cpp.o.provides: CMakeFiles/neuron.dir/Neuronmai
 
 CMakeFiles/neuron.dir/Neuronmain.cpp.o.provides.build: CMakeFiles/neuron.dir/Neuronmain.cpp.o
 
+CMakeFiles/neuron.dir/Network.cpp.o: CMakeFiles/neuron.dir/flags.make
+CMakeFiles/neuron.dir/Network.cpp.o: ../Network.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neuron.dir/Network.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/Network.cpp.o -c /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.cpp
+
+CMakeFiles/neuron.dir/Network.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuron.dir/Network.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.cpp > CMakeFiles/neuron.dir/Network.cpp.i
+
+CMakeFiles/neuron.dir/Network.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuron.dir/Network.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.cpp -o CMakeFiles/neuron.dir/Network.cpp.s
+
+CMakeFiles/neuron.dir/Network.cpp.o.requires:
+.PHONY : CMakeFiles/neuron.dir/Network.cpp.o.requires
+
+CMakeFiles/neuron.dir/Network.cpp.o.provides: CMakeFiles/neuron.dir/Network.cpp.o.requires
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.o.provides.build
+.PHONY : CMakeFiles/neuron.dir/Network.cpp.o.provides
+
+CMakeFiles/neuron.dir/Network.cpp.o.provides.build: CMakeFiles/neuron.dir/Network.cpp.o
+
 # Object files for target neuron
 neuron_OBJECTS = \
 "CMakeFiles/neuron.dir/Neuron.cpp.o" \
-"CMakeFiles/neuron.dir/Neuronmain.cpp.o"
+"CMakeFiles/neuron.dir/Neuronmain.cpp.o" \
+"CMakeFiles/neuron.dir/Network.cpp.o"
 
 # External object files for target neuron
 neuron_EXTERNAL_OBJECTS =
 
 neuron: CMakeFiles/neuron.dir/Neuron.cpp.o
 neuron: CMakeFiles/neuron.dir/Neuronmain.cpp.o
+neuron: CMakeFiles/neuron.dir/Network.cpp.o
 neuron: CMakeFiles/neuron.dir/build.make
 neuron: CMakeFiles/neuron.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable neuron"
@@ -116,6 +141,7 @@ CMakeFiles/neuron.dir/build: neuron
 
 CMakeFiles/neuron.dir/requires: CMakeFiles/neuron.dir/Neuron.cpp.o.requires
 CMakeFiles/neuron.dir/requires: CMakeFiles/neuron.dir/Neuronmain.cpp.o.requires
+CMakeFiles/neuron.dir/requires: CMakeFiles/neuron.dir/Network.cpp.o.requires
 .PHONY : CMakeFiles/neuron.dir/requires
 
 CMakeFiles/neuron.dir/clean:
