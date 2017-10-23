@@ -21,7 +21,7 @@ class Neuron
 	double potentiel;  
 	int nbSpikes;
 	long tSpike;
-	void updatePotential ();
+	void updatePotential (double S);
 	void storeSpikeTime ();
 	int time;
 	double iExt;

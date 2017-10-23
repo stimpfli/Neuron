@@ -66,12 +66,14 @@ double Neuron:: getPotentiel()const
  */
 bool Neuron:: update (long steps , int i)
 {
+	double stimulus (0);
 	if (steps == 0){return false;}
 	bool spikes (false);
 	const long tStop(time + steps);
 	
 	while (time < tStop)
-	{
+	{ 
+		stimulus = J*stimule();
 		if (potentiel >= Teta )
 		{
 			storeSpikeTime();
@@ -86,7 +88,7 @@ bool Neuron:: update (long steps , int i)
 		}	
 		else 
 		{
-			updatePotential();
+			updatePotential(stimulus);
 		
 		//std::cout<<"Icrease  n"<<i<<std::endl;
 
@@ -106,15 +108,13 @@ bool Neuron:: update (long steps , int i)
  * COMPARER CETTE VALEUR AU DERNIER SPIKE DU NEURON RELIE PERMET DE 
    SAVOIR SI LE DELAI EST BON ET SI LE BUFFER CORRECTEMENT IMPLEMENTE
  */
-void Neuron:: updatePotential ()
+void Neuron:: updatePotential (double S)
 {
-	int stimulus (0);
-	stimulus = stimule();
-	potentiel = exp(-h/Taue)*potentiel + iExt*R*(1-exp(-h/Taue)) + stimulus*J;
-	if (stimulus > 0)
+	potentiel = exp(-h/Taue)*potentiel + iExt*R*(1-exp(-h/Taue)) + S;
+	/*if (S > 0)
 	{
-		std::cout<<stimulus<<" stimule " <<"	"<<time<<std::endl;
-	}
+		std::cout<<S<<" stimule " <<"	"<<time<<std::endl;
+	}*/
 }
 
 /*
