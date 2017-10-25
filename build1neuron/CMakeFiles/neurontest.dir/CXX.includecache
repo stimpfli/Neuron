@@ -6,29 +6,41 @@
 
 #IncludeRegexTransform: 
 
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Constantes.h
+
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.cpp
 Network.h
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.h
 iostream
 -
-
-/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.h
-Neuron.h
-/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.h
-vector
+random
+-
+cassert
 -
 
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.h
+vector
+-
+Neuron.hh
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.hh
+Constantes.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Constantes.h
+
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.cpp
-Neuron.h
-/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.h
+Neuron.hh
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.hh
 string
 -
 iostream
 -
 cmath
 -
+cassert
+-
+random
+-
 
-/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.hh
 fstream
 -
 iostream
@@ -37,6 +49,8 @@ vector
 -
 string
 -
+Constantes.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Constantes.h
 
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/gtest/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
@@ -313,10 +327,10 @@ acxx_demangle.h
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/neurontest.cpp
 gtest/gtest.h
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/gtest/gtest.h
-Neuron.h
-/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.h
-Network.h
-/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.h
+Neuron.hh
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.hh
 cmath
 -
+Constantes.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Constantes.h
 
