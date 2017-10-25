@@ -327,10 +327,12 @@ acxx_demangle.h
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/neurontest.cpp
 gtest/gtest.h
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/gtest/gtest.h
-Neuron.hh
-/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.hh
+Network.h
+/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.h
 cmath
 -
 Constantes.h
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Constantes.h
+random
+-
 

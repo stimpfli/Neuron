@@ -11,6 +11,7 @@ CMakeFiles/neurontest.dir/Neuron.cpp.o: /home/INTRANET/stimpfli/Desktop/myfiles/
 CMakeFiles/neurontest.dir/Neuron.cpp.o: /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.hh
 
 CMakeFiles/neurontest.dir/neurontest.cpp.o: /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Constantes.h
+CMakeFiles/neurontest.dir/neurontest.cpp.o: /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.h
 CMakeFiles/neurontest.dir/neurontest.cpp.o: /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.hh
 CMakeFiles/neurontest.dir/neurontest.cpp.o: /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/gtest/googletest/include/gtest/gtest-death-test.h
 CMakeFiles/neurontest.dir/neurontest.cpp.o: /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/gtest/googletest/include/gtest/gtest-message.h
