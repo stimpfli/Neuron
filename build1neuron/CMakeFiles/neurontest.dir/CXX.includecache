@@ -49,6 +49,8 @@ vector
 -
 string
 -
+deque
+-
 Constantes.h
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Constantes.h
 
