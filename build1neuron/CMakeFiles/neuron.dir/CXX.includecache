@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Constantes.h
-
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.cpp
 Network.h
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Network.h
@@ -23,8 +21,6 @@ vector
 -
 Neuron.hh
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.hh
-Constantes.h
-/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Constantes.h
 
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuron.cpp
 Neuron.hh
@@ -51,8 +47,6 @@ string
 -
 deque
 -
-Constantes.h
-/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Constantes.h
 
 /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Neuronmain.cpp
 Network.h

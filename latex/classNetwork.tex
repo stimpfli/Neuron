@@ -1,0 +1,140 @@
+\hypertarget{classNetwork}{\section{Network Class Reference}
+\label{classNetwork}\index{Network@{Network}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}{Network} ()
+\item 
+void \hyperlink{classNetwork_ab07bb6f6d9020b9eb230551083ea929f}{update} ()
+\item 
+double \hyperlink{classNetwork_a6bdbcfb84eeba497bcab661f39d7bc6f}{count\-Connection\-E} (int num\-Neuron)
+\item 
+double \hyperlink{classNetwork_a60b033c815f3685e6fc3bb0cf244a06a}{count\-Connection\-I} (int num\-Neuron)
+\item 
+double \hyperlink{classNetwork_ad214f401b7ddf102fb574fbd050bf7de}{get\-Weight} (int num\-Neuron)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classNetwork_a6660b0fe73afa5bf261a5bcc6f6f81d8}{init\-Exitatory} ()
+\item 
+void \hyperlink{classNetwork_aa2cc8747377851de3fc53a5ab7d7bf54}{init\-Inhibitory} ()
+\item 
+void \hyperlink{classNetwork_a82eecc52e44648d2f43d5380a19bcc0c}{init\-Links} ()
+\item 
+void \hyperlink{classNetwork_a7441f70fb101865b0ea475e149229edc}{transmit} (int i)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNetwork_a1b7832bc2c7b8855cdc3b2d6329eff9d}{std\-::vector$<$ \hyperlink{classNeuron}{Neuron} $>$ \hyperlink{classNetwork_a1b7832bc2c7b8855cdc3b2d6329eff9d}{neurons}}\label{classNetwork_a1b7832bc2c7b8855cdc3b2d6329eff9d}
+
+\begin{DoxyCompactList}\small\item\em le tableau de neuronesque le cortex contient \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a21a49637ac27a1080161873364c1065e}{double \hyperlink{classNetwork_a21a49637ac27a1080161873364c1065e}{t}}\label{classNetwork_a21a49637ac27a1080161873364c1065e}
+
+\begin{DoxyCompactList}\small\item\em le temps global de la simulation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}{\index{Network@{Network}!Network@{Network}}
+\index{Network@{Network}!Network@{Network}}
+\subsubsection[{Network}]{\setlength{\rightskip}{0pt plus 5cm}Network\-::\-Network (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}
+C\-O\-N\-S\-T\-R\-U\-I\-T L\-E\-S L\-I\-E\-N\-S E\-N\-T\-R\-E L\-E\-S N\-E\-U\-R\-O\-N\-E\-S C\-O\-N\-S\-T\-R\-U\-I\-T T\-O\-U\-S L\-E\-S N\-E\-U\-R\-O\-N\-E\-S D\-E L\-A S\-I\-M\-U\-L\-A\-T\-I\-O\-N 
+
+\subsection{Member Function Documentation}
+\hypertarget{classNetwork_a6bdbcfb84eeba497bcab661f39d7bc6f}{\index{Network@{Network}!count\-Connection\-E@{count\-Connection\-E}}
+\index{count\-Connection\-E@{count\-Connection\-E}!Network@{Network}}
+\subsubsection[{count\-Connection\-E}]{\setlength{\rightskip}{0pt plus 5cm}double Network\-::count\-Connection\-E (
+\begin{DoxyParamCaption}
+\item[{int}]{num\-Neuron}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a6bdbcfb84eeba497bcab661f39d7bc6f}
+
+\begin{DoxyParams}{Parameters}
+{\em le} & neuron i a observer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le nombre de connection excitatrice au neuron i 
+\end{DoxyReturn}
+\hypertarget{classNetwork_a60b033c815f3685e6fc3bb0cf244a06a}{\index{Network@{Network}!count\-Connection\-I@{count\-Connection\-I}}
+\index{count\-Connection\-I@{count\-Connection\-I}!Network@{Network}}
+\subsubsection[{count\-Connection\-I}]{\setlength{\rightskip}{0pt plus 5cm}double Network\-::count\-Connection\-I (
+\begin{DoxyParamCaption}
+\item[{int}]{num\-Neuron}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a60b033c815f3685e6fc3bb0cf244a06a}
+
+\begin{DoxyParams}{Parameters}
+{\em le} & neuron i a observer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le nombre de connection inhibitrice au neuron i 
+\end{DoxyReturn}
+\hypertarget{classNetwork_ad214f401b7ddf102fb574fbd050bf7de}{\index{Network@{Network}!get\-Weight@{get\-Weight}}
+\index{get\-Weight@{get\-Weight}!Network@{Network}}
+\subsubsection[{get\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}double Network\-::get\-Weight (
+\begin{DoxyParamCaption}
+\item[{int}]{num\-Neuron}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_ad214f401b7ddf102fb574fbd050bf7de}
+
+\begin{DoxyParams}{Parameters}
+{\em le} & neuron i dont on veut savoir le poid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le poid associé au neuron i 
+\end{DoxyReturn}
+\hypertarget{classNetwork_a6660b0fe73afa5bf261a5bcc6f6f81d8}{\index{Network@{Network}!init\-Exitatory@{init\-Exitatory}}
+\index{init\-Exitatory@{init\-Exitatory}!Network@{Network}}
+\subsubsection[{init\-Exitatory}]{\setlength{\rightskip}{0pt plus 5cm}void Network\-::init\-Exitatory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classNetwork_a6660b0fe73afa5bf261a5bcc6f6f81d8}
+initialise tous les neurones excitateur \hypertarget{classNetwork_aa2cc8747377851de3fc53a5ab7d7bf54}{\index{Network@{Network}!init\-Inhibitory@{init\-Inhibitory}}
+\index{init\-Inhibitory@{init\-Inhibitory}!Network@{Network}}
+\subsubsection[{init\-Inhibitory}]{\setlength{\rightskip}{0pt plus 5cm}void Network\-::init\-Inhibitory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classNetwork_aa2cc8747377851de3fc53a5ab7d7bf54}
+initialise tous les neurones inhibiteur \hypertarget{classNetwork_a82eecc52e44648d2f43d5380a19bcc0c}{\index{Network@{Network}!init\-Links@{init\-Links}}
+\index{init\-Links@{init\-Links}!Network@{Network}}
+\subsubsection[{init\-Links}]{\setlength{\rightskip}{0pt plus 5cm}void Network\-::init\-Links (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classNetwork_a82eecc52e44648d2f43d5380a19bcc0c}
+genere aléatoirement des liens etre les neurones avec 10\% de connection \hypertarget{classNetwork_a7441f70fb101865b0ea475e149229edc}{\index{Network@{Network}!transmit@{transmit}}
+\index{transmit@{transmit}!Network@{Network}}
+\subsubsection[{transmit}]{\setlength{\rightskip}{0pt plus 5cm}void Network\-::transmit (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classNetwork_a7441f70fb101865b0ea475e149229edc}
+parcours le deque de connection du neuron i et transmet le spike 
+\begin{DoxyParams}{Parameters}
+{\em le} & nombre du neuron qui transmet \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNetwork_ab07bb6f6d9020b9eb230551083ea929f}{\index{Network@{Network}!update@{update}}
+\index{update@{update}!Network@{Network}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Network\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_ab07bb6f6d9020b9eb230551083ea929f}
+D\-I\-R\-I\-G\-E T\-O\-U\-T\-E L\-A S\-I\-M\-U\-L\-A\-T\-I\-O\-N A T\-R\-A\-V\-E\-R\-S T\-O\-U\-S L\-E\-S N\-E\-U\-R\-O\-N\-E\-S appelle transmit qui gère la transmition du spike aux autres neurones connecté appelle store spike qui va enregistrer le temps et le numéros du neuron 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Network.\-h\item 
+Network.\-cpp\end{DoxyCompactItemize}

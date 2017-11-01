@@ -53,6 +53,37 @@ CMAKE_SOURCE_DIR = /home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron
 CMAKE_BINARY_DIR = /home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron
 
 #=============================================================================
+# Target rules for target CMakeFiles/doc.dir
+
+# All Build rule for target.
+CMakeFiles/doc.dir/all:
+	$(MAKE) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/depend
+	$(MAKE) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron/CMakeFiles 
+	@echo "Built target doc"
+.PHONY : CMakeFiles/doc.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/doc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/doc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron/CMakeFiles 0
+.PHONY : CMakeFiles/doc.dir/rule
+
+# Convenience name for target.
+doc: CMakeFiles/doc.dir/rule
+.PHONY : doc
+
+# clean rule for target.
+CMakeFiles/doc.dir/clean:
+	$(MAKE) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/clean
+.PHONY : CMakeFiles/doc.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/doc.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/neuron.dir
 
 # All Build rule for target.
@@ -91,8 +122,8 @@ clean: CMakeFiles/neuron.dir/clean
 # Target rules for target CMakeFiles/neurontest.dir
 
 # All Build rule for target.
-CMakeFiles/neurontest.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 CMakeFiles/neurontest.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/neurontest.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/depend
 	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/stimpfli/myfiles/cpp/Neuron/build1neuron/CMakeFiles  11 12 13

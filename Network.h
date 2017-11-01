@@ -1,25 +1,29 @@
 #ifndef NETWORK_H
 #define NETWORK_H
 
-#include "Neuron.h"
+
 #include <vector>
-
-//CONSTANTES
-const int NbNeuron (2);//neurons
-const double tStop(5000);//ms
-
+#include "Neuron.hh"
 
 class Network
 {
 	private:
-	std::vector <Neuron> neurons;
-	std::vector <std::vector<bool> > linked;
-	int t;
+	std::vector <Neuron> neurons;	///< le tableau de neuronesque le cortex contient
+	double t;						///< le temps global de la simulation 
+	void initExitatory();
+	void initInhibitory();
+	void initLinks();
+	void transmit(int i);
 	
 	public:
 	Network();
 	void update();
-	void transmit(int i);
+	double countConnectionE (int numNeuron) ;
+	double countConnectionI (int numNeuron) ;
+	double getWeight (int numNeuron);
+	
+	
+	
 	
 	
 	

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/CMakeLists.txt"
+  "/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/Doxyfile.in"
   "/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/gtest/CMakeLists.txt"
   "/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/gtest/googlemock/CMakeLists.txt"
   "/home/INTRANET/stimpfli/Desktop/myfiles/cpp/Neuron/gtest/googlemock/cmake/gmock.pc.in"
@@ -33,6 +34,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.2/Modules/Compiler/GNU-C.cmake"
   "/usr/local/share/cmake-3.2/Modules/Compiler/GNU-CXX.cmake"
   "/usr/local/share/cmake-3.2/Modules/Compiler/GNU.cmake"
+  "/usr/local/share/cmake-3.2/Modules/FindDoxygen.cmake"
   "/usr/local/share/cmake-3.2/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/local/share/cmake-3.2/Modules/FindPackageMessage.cmake"
   "/usr/local/share/cmake-3.2/Modules/FindPythonInterp.cmake"
@@ -53,6 +55,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "Doxyfile"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -62,6 +65,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/neuron.dir/DependInfo.cmake"
+  "CMakeFiles/doc.dir/DependInfo.cmake"
   "CMakeFiles/neurontest.dir/DependInfo.cmake"
   "gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "gtest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
