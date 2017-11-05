@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['potentiel',['potentiel',['../classNeuron.html#a36c756b0c54b9d258726d7b667feb63d',1,'Neuron']]]
+  ['testoff',['testOff',['../classNeuron.html#a4063d72fda40dd39153fc871435b9d6a',1,'Neuron']]],
+  ['teston',['testOn',['../classNeuron.html#a2f26d1bc3d172c2e5319541dc64d1979',1,'Neuron']]]
 ];

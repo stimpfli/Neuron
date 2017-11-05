@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,28 +87,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXPERIMENT_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Network.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classExperiment.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classExperiment.html">Experiment</a> </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classExperiment.html#a465c0084fd487ceabaeef546f0a419e5">    9</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classExperiment.html#a465c0084fd487ceabaeef546f0a419e5">g</a>;    </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classExperiment.html#a958e9e5263561bfeae89bbaf3d1fff67">   10</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classExperiment.html#a958e9e5263561bfeae89bbaf3d1fff67">eta</a>; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classExperiment.html">Experiment</a> (<span class="keywordtype">double</span> <a class="code" href="classExperiment.html#a465c0084fd487ceabaeef546f0a419e5">g</a>, <span class="keywordtype">double</span> <a class="code" href="classExperiment.html#a958e9e5263561bfeae89bbaf3d1fff67">eta</a> );</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> doExperiment () <span class="keyword">const</span> ;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classExperiment.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classExperiment.html">Experiment</a> </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">double</span> g;    </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">double</span> eta; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> askParameters ();</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classExperiment_html_a958e9e5263561bfeae89bbaf3d1fff67"><div class="ttname"><a href="classExperiment.html#a958e9e5263561bfeae89bbaf3d1fff67">Experiment::eta</a></div><div class="ttdeci">double eta</div><div class="ttdoc">eta the other parameter of the experiment </div><div class="ttdef"><b>Definition:</b> Experiment.h:10</div></div>
-<div class="ttc" id="classExperiment_html_a465c0084fd487ceabaeef546f0a419e5"><div class="ttname"><a href="classExperiment.html#a465c0084fd487ceabaeef546f0a419e5">Experiment::g</a></div><div class="ttdeci">double g</div><div class="ttdoc">g one parameter of the experiment </div><div class="ttdef"><b>Definition:</b> Experiment.h:9</div></div>
-<div class="ttc" id="classExperiment_html"><div class="ttname"><a href="classExperiment.html">Experiment</a></div><div class="ttdef"><b>Definition:</b> Experiment.h:6</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classExperiment.html#a303e6a05d99f403ff4793495a2fbff58">Experiment</a> ();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExperiment.html#aa459e94575e000ced358cf84fdcf662c">doExperiment</a> ();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classExperiment_html_a303e6a05d99f403ff4793495a2fbff58"><div class="ttname"><a href="classExperiment.html#a303e6a05d99f403ff4793495a2fbff58">Experiment::Experiment</a></div><div class="ttdeci">Experiment()</div><div class="ttdef"><b>Definition:</b> Experiment.cpp:9</div></div>
+<div class="ttc" id="classExperiment_html_aa459e94575e000ced358cf84fdcf662c"><div class="ttname"><a href="classExperiment.html#aa459e94575e000ced358cf84fdcf662c">Experiment::doExperiment</a></div><div class="ttdeci">void doExperiment()</div><div class="ttdef"><b>Definition:</b> Experiment.cpp:47</div></div>
+<div class="ttc" id="classExperiment_html"><div class="ttname"><a href="classExperiment.html">Experiment</a></div><div class="ttdef"><b>Definition:</b> Experiment.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 1 2017 22:52:02 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 5 2017 10:19:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

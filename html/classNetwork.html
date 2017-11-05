@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,18 +83,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classNetwork-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Network Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Network_8h_source.html">Network.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3cc2fb4f8fa4d507077e8da85ce5a1c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8">Network</a> ()</td></tr>
-<tr class="separator:a3cc2fb4f8fa4d507077e8da85ce5a1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa703f0c9a5b85bfcb782a347234cbf01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#aa703f0c9a5b85bfcb782a347234cbf01">Network</a> (double g=G, double eta=Eta)</td></tr>
+<tr class="separator:aa703f0c9a5b85bfcb782a347234cbf01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab07bb6f6d9020b9eb230551083ea929f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#ab07bb6f6d9020b9eb230551083ea929f">update</a> ()</td></tr>
 <tr class="separator:ab07bb6f6d9020b9eb230551083ea929f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bdbcfb84eeba497bcab661f39d7bc6f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a6bdbcfb84eeba497bcab661f39d7bc6f">countConnectionE</a> (int numNeuron)</td></tr>
@@ -103,39 +103,32 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a60b033c815f3685e6fc3bb0cf244a06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad214f401b7ddf102fb574fbd050bf7de"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#ad214f401b7ddf102fb574fbd050bf7de">getWeight</a> (int numNeuron)</td></tr>
 <tr class="separator:ad214f401b7ddf102fb574fbd050bf7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a6660b0fe73afa5bf261a5bcc6f6f81d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a6660b0fe73afa5bf261a5bcc6f6f81d8">initExitatory</a> ()</td></tr>
-<tr class="separator:a6660b0fe73afa5bf261a5bcc6f6f81d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2cc8747377851de3fc53a5ab7d7bf54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#aa2cc8747377851de3fc53a5ab7d7bf54">initInhibitory</a> ()</td></tr>
-<tr class="separator:aa2cc8747377851de3fc53a5ab7d7bf54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82eecc52e44648d2f43d5380a19bcc0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a82eecc52e44648d2f43d5380a19bcc0c">initLinks</a> ()</td></tr>
-<tr class="separator:a82eecc52e44648d2f43d5380a19bcc0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7441f70fb101865b0ea475e149229edc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a7441f70fb101865b0ea475e149229edc">transmit</a> (int i)</td></tr>
-<tr class="separator:a7441f70fb101865b0ea475e149229edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a1b7832bc2c7b8855cdc3b2d6329eff9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b7832bc2c7b8855cdc3b2d6329eff9d"></a>
-std::vector&lt; <a class="el" href="classNeuron.html">Neuron</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a1b7832bc2c7b8855cdc3b2d6329eff9d">neurons</a></td></tr>
-<tr class="memdesc:a1b7832bc2c7b8855cdc3b2d6329eff9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">le tableau de neuronesque le cortex contient <br/></td></tr>
-<tr class="separator:a1b7832bc2c7b8855cdc3b2d6329eff9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21a49637ac27a1080161873364c1065e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21a49637ac27a1080161873364c1065e"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a21a49637ac27a1080161873364c1065e">t</a></td></tr>
-<tr class="memdesc:a21a49637ac27a1080161873364c1065e"><td class="mdescLeft">&#160;</td><td class="mdescRight">le temps global de la simulation <br/></td></tr>
-<tr class="separator:a21a49637ac27a1080161873364c1065e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d460ec1efc086465dfd9429f358c908"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a3d460ec1efc086465dfd9429f358c908">getG</a> ()</td></tr>
+<tr class="separator:a3d460ec1efc086465dfd9429f358c908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3cc2fb4f8fa4d507077e8da85ce5a1c8"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>La classe represente un réseau , tous les neurones qu'il contient et le temps spécifique il initialise le réseau entre neurones et crée les neurones </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aa703f0c9a5b85bfcb782a347234cbf01"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Network::Network </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>g</em> = <code>G</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>eta</em> = <code>Eta</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -190,6 +183,22 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 
 </div>
 </div>
+<a class="anchor" id="a3d460ec1efc086465dfd9429f358c908"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Network::getG </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Le paramètre g de la simulation </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ad214f401b7ddf102fb574fbd050bf7de"></a>
 <div class="memitem">
 <div class="memproto">
@@ -210,109 +219,6 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>le poid associé au neuron i </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a6660b0fe73afa5bf261a5bcc6f6f81d8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Network::initExitatory </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>initialise tous les neurones excitateur </p>
-
-</div>
-</div>
-<a class="anchor" id="aa2cc8747377851de3fc53a5ab7d7bf54"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Network::initInhibitory </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>initialise tous les neurones inhibiteur </p>
-
-</div>
-</div>
-<a class="anchor" id="a82eecc52e44648d2f43d5380a19bcc0c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Network::initLinks </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>genere aléatoirement des liens etre les neurones avec 10% de connection </p>
-
-</div>
-</div>
-<a class="anchor" id="a7441f70fb101865b0ea475e149229edc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Network::transmit </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>parcours le deque de connection du neuron i et transmet le spike </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">le</td><td>nombre du neuron qui transmet </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -339,7 +245,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 1 2017 22:52:02 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 5 2017 10:19:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

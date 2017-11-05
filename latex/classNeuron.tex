@@ -1,16 +1,20 @@
 \hypertarget{classNeuron}{\section{Neuron Class Reference}
 \label{classNeuron}\index{Neuron@{Neuron}}
 }
+
+
+{\ttfamily \#include $<$Neuron.\-hh$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classNeuron_ae88565006def2c1e36d6ff5c2c7a274c}{Neuron} (double V, double \hyperlink{classNeuron_a6e18453cc704aac89fef1cc3e69ac20c}{J})
+\hyperlink{classNeuron_a3248dc4eb8ab1d19f8b8493c3491dbf5}{Neuron} (double V, double J, double g=G)
 \item 
 double \hyperlink{classNeuron_ac1eee18fc2e8bb6b5f39f727443e6930}{get\-Potentiel} () const 
 \item 
 int \hyperlink{classNeuron_ab1efa405eb0cd7bac6ca012c961efe5d}{get\-Nb\-Spikes} () const 
 \item 
-bool \hyperlink{classNeuron_acab9fb2615007293300080208b40d5f8}{update} (long steps, int i=0)
+bool \hyperlink{classNeuron_afb9cc7341f936c0db49ccf230c64b769}{update} (long steps, int i=0, double g=G, double eta=Eta)
 \item 
 void \hyperlink{classNeuron_a3953cbc7a936c974bb93a1507dc107a3}{display\-Neuron} () const 
 \item 
@@ -22,7 +26,7 @@ void \hyperlink{classNeuron_afedfd126ca5fb3c3371f0c81521110c1}{set\-I\-Ext} (dou
 \item 
 void \hyperlink{classNeuron_a242fda806f234c192576c34907140c27}{store\-Spike} (std\-::ofstream \&pike\-Storage, int i) const 
 \item 
-void \hyperlink{classNeuron_af0fcacf106c3cf9d02cd1b3a19e78459}{receive} (int delivery\-Time, double \hyperlink{classNeuron_a6e18453cc704aac89fef1cc3e69ac20c}{J})
+void \hyperlink{classNeuron_ae6b512fa5e66521fc5455d037b8575df}{receive} (int delivery\-Time, double J, double g)
 \item 
 void \hyperlink{classNeuron_a0782ae55ba365478ecb4844a85d1f7fc}{display\-Buffer} (int i) const 
 \item 
@@ -38,56 +42,21 @@ int \hyperlink{classNeuron_a044cf97c24a6f465e855df50ef13d89e}{get\-Neuron\-Num} 
 \item 
 size\-\_\-t \hyperlink{classNeuron_af519d734d92414ae4af2b1c205c896ae}{get\-Targetsize} ()
 \end{DoxyCompactItemize}
-\subsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \hyperlink{classNeuron_ac5936dd706416d5268ec11d24f5456e6}{update\-Potential} (double S)
-\item 
-void \hyperlink{classNeuron_a08d42d3ef5c91ad5f7c9cd7d54fff714}{store\-Spike\-Time} ()
-\item 
-double \hyperlink{classNeuron_a572f11ba08ac1fef947058ea1de86be6}{stimule} ()
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{classNeuron_a36c756b0c54b9d258726d7b667feb63d}{double \hyperlink{classNeuron_a36c756b0c54b9d258726d7b667feb63d}{potentiel}}\label{classNeuron_a36c756b0c54b9d258726d7b667feb63d}
 
-\begin{DoxyCompactList}\small\item\em le potentiel du neuron \end{DoxyCompactList}\item 
-\hypertarget{classNeuron_a058e7be13216126efefec7891391d6df}{int \hyperlink{classNeuron_a058e7be13216126efefec7891391d6df}{nb\-Spikes}}\label{classNeuron_a058e7be13216126efefec7891391d6df}
 
-\begin{DoxyCompactList}\small\item\em le nombre de spike du neuron \end{DoxyCompactList}\item 
-\hypertarget{classNeuron_a6acf3f720bf2f6bd414a6f0617c6c373}{long \hyperlink{classNeuron_a6acf3f720bf2f6bd414a6f0617c6c373}{t\-Spike}}\label{classNeuron_a6acf3f720bf2f6bd414a6f0617c6c373}
-
-\begin{DoxyCompactList}\small\item\em le temps du dernier spike \end{DoxyCompactList}\item 
-\hypertarget{classNeuron_a03f92d2e014eb23e482a9894486391b9}{int \hyperlink{classNeuron_a03f92d2e014eb23e482a9894486391b9}{time}}\label{classNeuron_a03f92d2e014eb23e482a9894486391b9}
-
-\begin{DoxyCompactList}\small\item\em le temps local du neuron \end{DoxyCompactList}\item 
-\hypertarget{classNeuron_a1557475173454c5421e7c5f039845b5f}{double \hyperlink{classNeuron_a1557475173454c5421e7c5f039845b5f}{i\-Ext}}\label{classNeuron_a1557475173454c5421e7c5f039845b5f}
-
-\begin{DoxyCompactList}\small\item\em le courant extérieur \end{DoxyCompactList}\item 
-\hypertarget{classNeuron_a046113587b8763ee6d9dc52c590ed176}{std\-::vector$<$ double $>$ \hyperlink{classNeuron_a046113587b8763ee6d9dc52c590ed176}{ring\-Buffer}}\label{classNeuron_a046113587b8763ee6d9dc52c590ed176}
-
-\begin{DoxyCompactList}\small\item\em le buffer circulaire \end{DoxyCompactList}\item 
-\hypertarget{classNeuron_a6e18453cc704aac89fef1cc3e69ac20c}{double \hyperlink{classNeuron_a6e18453cc704aac89fef1cc3e69ac20c}{J}}\label{classNeuron_a6e18453cc704aac89fef1cc3e69ac20c}
-
-\begin{DoxyCompactList}\small\item\em le poids du neuron \end{DoxyCompactList}\item 
-\hypertarget{classNeuron_a7cb124b468c9499ce0d718504979d609}{bool \hyperlink{classNeuron_a7cb124b468c9499ce0d718504979d609}{test}}\label{classNeuron_a7cb124b468c9499ce0d718504979d609}
-
-\begin{DoxyCompactList}\small\item\em si le neuron est mode test ou non \end{DoxyCompactList}\item 
-\hypertarget{classNeuron_a63c7a5101d977883d77b8351af85f64f}{std\-::deque$<$ int $>$ \hyperlink{classNeuron_a63c7a5101d977883d77b8351af85f64f}{targets}}\label{classNeuron_a63c7a5101d977883d77b8351af85f64f}
-
-\begin{DoxyCompactList}\small\item\em le tableau de neuron auxquel notre neuron et lié \end{DoxyCompactList}\end{DoxyCompactItemize}
-
+\subsection{Detailed Description}
+Represente un neurone ces caractéristiques contient notament les references aux neurones auxquel il est lié 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classNeuron_ae88565006def2c1e36d6ff5c2c7a274c}{\index{Neuron@{Neuron}!Neuron@{Neuron}}
+\hypertarget{classNeuron_a3248dc4eb8ab1d19f8b8493c3491dbf5}{\index{Neuron@{Neuron}!Neuron@{Neuron}}
 \index{Neuron@{Neuron}!Neuron@{Neuron}}
 \subsubsection[{Neuron}]{\setlength{\rightskip}{0pt plus 5cm}Neuron\-::\-Neuron (
 \begin{DoxyParamCaption}
 \item[{double}]{V, }
-\item[{double}]{J}
+\item[{double}]{J, }
+\item[{double}]{g = {\ttfamily G}}
 \end{DoxyParamCaption}
-)}}\label{classNeuron_ae88565006def2c1e36d6ff5c2c7a274c}
+)}}\label{classNeuron_a3248dc4eb8ab1d19f8b8493c3491dbf5}
 I\-N\-I\-T\-I\-A\-L\-I\-S\-E L\-E T\-E\-M\-P\-S D\-U N\-E\-U\-R\-O\-N E\-T M\-E\-T L\-E T\-E\-M\-P\-S D\-U 1\-E\-R S\-P\-I\-K\-E 0 I\-N\-I\-T\-I\-A\-L\-I\-S\-E L\-E B\-U\-F\-F\-E\-R A S\-A T\-A\-I\-L\-L\-E R\-E\-M\-P\-L\-I\-S D\-E 0 
 \begin{DoxyParams}{Parameters}
 {\em Le} & voltage intitial et le J du neurone (Je ou Ji) \\
@@ -197,14 +166,15 @@ la taille du vecteur de connection
 \begin{DoxyReturn}{Returns}
 le temps réel du dernier spike 
 \end{DoxyReturn}
-\hypertarget{classNeuron_af0fcacf106c3cf9d02cd1b3a19e78459}{\index{Neuron@{Neuron}!receive@{receive}}
+\hypertarget{classNeuron_ae6b512fa5e66521fc5455d037b8575df}{\index{Neuron@{Neuron}!receive@{receive}}
 \index{receive@{receive}!Neuron@{Neuron}}
 \subsubsection[{receive}]{\setlength{\rightskip}{0pt plus 5cm}void Neuron\-::receive (
 \begin{DoxyParamCaption}
 \item[{int}]{delivery\-Time, }
-\item[{double}]{J}
+\item[{double}]{J, }
+\item[{double}]{g}
 \end{DoxyParamCaption}
-)}}\label{classNeuron_af0fcacf106c3cf9d02cd1b3a19e78459}
+)}}\label{classNeuron_ae6b512fa5e66521fc5455d037b8575df}
 G\-E\-R\-E L\-A R\-E\-C\-E\-P\-T\-I\-O\-N D\-U S\-T\-I\-M\-U\-L\-U\-S E\-T E\-N\-R\-E\-G\-I\-S\-T\-R\-E D\-A\-N\-S L\-E B\-U\-F\-F\-E\-R C\-E D\-E\-R\-N\-I\-E\-R 
 \begin{DoxyParams}{Parameters}
 {\em le} & moment ou ce spike doit etre transmit et le poids de ce dernier \\
@@ -222,16 +192,6 @@ G\-E\-R\-E L\-A R\-E\-C\-E\-P\-T\-I\-O\-N D\-U S\-T\-I\-M\-U\-L\-U\-S E\-T E\-N\
 {\em l'intensité} & que l'on veut soumettre au neuron \\
 \hline
 \end{DoxyParams}
-\hypertarget{classNeuron_a572f11ba08ac1fef947058ea1de86be6}{\index{Neuron@{Neuron}!stimule@{stimule}}
-\index{stimule@{stimule}!Neuron@{Neuron}}
-\subsubsection[{stimule}]{\setlength{\rightskip}{0pt plus 5cm}double Neuron\-::stimule (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{classNeuron_a572f11ba08ac1fef947058ea1de86be6}
-V\-E\-R\-I\-F\-I\-E S\-I A\-U M\-O\-M\-E\-N\-T T , L\-E N\-E\-U\-R\-O\-N R\-EÇ\-O\-I\-T U\-N S\-T\-I\-M\-U\-L\-U\-S \begin{DoxyReturn}{Returns}
-le stimulus dans le buffer au temps t (venant des autres neurons) 
-\end{DoxyReturn}
 \hypertarget{classNeuron_a242fda806f234c192576c34907140c27}{\index{Neuron@{Neuron}!store\-Spike@{store\-Spike}}
 \index{store\-Spike@{store\-Spike}!Neuron@{Neuron}}
 \subsubsection[{store\-Spike}]{\setlength{\rightskip}{0pt plus 5cm}void Neuron\-::store\-Spike (
@@ -245,14 +205,7 @@ E\-C\-R\-I\-S T\-O\-U\-T\-E L\-E\-S V\-A\-L\-E\-U\-R\-S D\-A\-N\-S L\-E D\-O\-S\
 {\em un} & stream vers un fichier \\
 \hline
 \end{DoxyParams}
-\hypertarget{classNeuron_a08d42d3ef5c91ad5f7c9cd7d54fff714}{\index{Neuron@{Neuron}!store\-Spike\-Time@{store\-Spike\-Time}}
-\index{store\-Spike\-Time@{store\-Spike\-Time}!Neuron@{Neuron}}
-\subsubsection[{store\-Spike\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void Neuron\-::store\-Spike\-Time (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{classNeuron_a08d42d3ef5c91ad5f7c9cd7d54fff714}
-E\-N\-R\-E\-G\-I\-S\-T\-E L\-E T\-E\-M\-P\-S T\-I\-M\-E E\-N S\-T\-E\-P\-S D\-A\-N\-S L\-E T\-E\-M\-P\-S D\-U D\-E\-R\-N\-I\-E\-R S\-P\-I\-K\-E L\-O\-R\-S\-Q\-U\-E A\-P\-P\-E\-L\-E \hypertarget{classNeuron_a4063d72fda40dd39153fc871435b9d6a}{\index{Neuron@{Neuron}!test\-Off@{test\-Off}}
+\hypertarget{classNeuron_a4063d72fda40dd39153fc871435b9d6a}{\index{Neuron@{Neuron}!test\-Off@{test\-Off}}
 \index{test\-Off@{test\-Off}!Neuron@{Neuron}}
 \subsubsection[{test\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void Neuron\-::test\-Off (
 \begin{DoxyParamCaption}
@@ -266,32 +219,22 @@ sors le neuron du mode test \hypertarget{classNeuron_a2f26d1bc3d172c2e5319541dc6
 {}
 \end{DoxyParamCaption}
 )}}\label{classNeuron_a2f26d1bc3d172c2e5319541dc64d1979}
-Passe le neuron en mode test \hypertarget{classNeuron_acab9fb2615007293300080208b40d5f8}{\index{Neuron@{Neuron}!update@{update}}
+Passe le neuron en mode test \hypertarget{classNeuron_afb9cc7341f936c0db49ccf230c64b769}{\index{Neuron@{Neuron}!update@{update}}
 \index{update@{update}!Neuron@{Neuron}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}bool Neuron\-::update (
 \begin{DoxyParamCaption}
 \item[{long}]{steps, }
-\item[{int}]{i = {\ttfamily 0}}
+\item[{int}]{i = {\ttfamily 0}, }
+\item[{double}]{g = {\ttfamily G}, }
+\item[{double}]{eta = {\ttfamily Eta}}
 \end{DoxyParamCaption}
-)}}\label{classNeuron_acab9fb2615007293300080208b40d5f8}
+)}}\label{classNeuron_afb9cc7341f936c0db49ccf230c64b769}
 I\-TÈ\-R\-E S\-U\-R L\-E N\-O\-M\-B\-R\-E D\-E S\-T\-E\-P\-S V\-E\-R\-I\-F\-I\-E L\-E\-S S\-T\-I\-M\-U\-L\-U\-S E\-X\-T\-E\-R\-N\-E S\-I E\-N M\-O\-D\-E T\-E\-S\-T , S\-T\-I\-M\-U\-L\-A\-T\-I\-O\-N D\-E L'E\-X\-T\-E\-R\-I\-E\-U\-R D\-E L\-A S\-I\-M\-U\-L\-A\-T\-I\-O\-N N\-E S\-O\-N\-T P\-A\-S P\-R\-I\-S E\-N C\-O\-M\-P\-T\-E (V\-O\-I\-R G\-O\-O\-G\-L\-E T\-E\-S\-T) S\-I L\-E P\-O\-T\-E\-N\-T\-I\-E\-L D\-E\-P\-A\-S\-S\-E T\-H\-E\-T\-A ( V\-R\-E\-F\-R\-A\-C\-T\-O\-R\-Y )\-: S\-T\-O\-R\-E L\-E T\-E\-M\-P\-S D\-U D\-E\-R\-N\-I\-E\-R S\-P\-I\-K\-E I\-N\-C\-R\-E\-M\-E\-N\-T\-E C\-O\-M\-P\-T\-E\-U\-R D\-E S\-P\-I\-K\-E M\-E\-T L\-E B\-O\-O\-L A T\-R\-U\-E S\-I I\-L Y A E\-U U\-N S\-P\-I\-K\-E A\-V\-A\-N\-T E\-T\-T Q\-U\-E L'O\-N S\-E T\-R\-O\-U\-V\-E D\-A\-N\-S L\-E R\-E\-F\-R\-A\-C\-T\-O\-R\-Y T\-I\-M\-E\-: M\-A\-I\-N\-T\-I\-E\-N\-T L\-E P\-O\-T\-E\-N\-T\-I\-E\-L A 0 m\-V S\-I\-N\-O\-N\-: M\-O\-D\-I\-F\-I\-E L\-A V\-A\-L\-E\-U\-R D\-U P\-O\-T\-E\-N\-T\-I\-E\-L A\-U\-G\-M\-E\-N\-T\-E L\-E\-S S\-T\-E\-P\-S D\-E S\-I\-M\-U\-L\-A\-T\-I\-O\-N D\-E 1 \begin{DoxyReturn}{Returns}
 true si le neuron a spiké 
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
 {\em la} & position du neuron dans le cortex (simulation) , le nombre de steps \\
-\hline
-\end{DoxyParams}
-\hypertarget{classNeuron_ac5936dd706416d5268ec11d24f5456e6}{\index{Neuron@{Neuron}!update\-Potential@{update\-Potential}}
-\index{update\-Potential@{update\-Potential}!Neuron@{Neuron}}
-\subsubsection[{update\-Potential}]{\setlength{\rightskip}{0pt plus 5cm}void Neuron\-::update\-Potential (
-\begin{DoxyParamCaption}
-\item[{double}]{S}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{classNeuron_ac5936dd706416d5268ec11d24f5456e6}
-R\-E\-S\-O\-U\-T L'E\-Q\-U\-A\-T\-I\-O\-N D\-I\-F\-F\-E\-R\-E\-N\-T\-I\-E\-L\-L\-E D\-U P\-O\-T\-E\-N\-T\-I\-E\-L D\-E L\-A M\-E\-M\-B\-R\-A\-N\-E 
-\begin{DoxyParams}{Parameters}
-{\em les} & stimulus de l'extérieur \\
 \hline
 \end{DoxyParams}
 

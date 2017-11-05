@@ -7,11 +7,10 @@
 
 var indexSectionsWithContent =
 {
-  0: "cdegijnprstu",
+  0: "cdegnrstu",
   1: "en",
-  2: "cdginrstu",
-  3: "egijnprt",
-  4: "n"
+  2: "cdegnrstu",
+  3: "n"
 };
 
 var indexSectionNames =
@@ -19,8 +18,7 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "functions",
-  3: "variables",
-  4: "pages"
+  3: "pages"
 };
 
 function convertToId(search)

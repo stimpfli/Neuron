@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['receive',['receive',['../classNeuron.html#af0fcacf106c3cf9d02cd1b3a19e78459',1,'Neuron']]],
-  ['ringbuffer',['ringBuffer',['../classNeuron.html#a046113587b8763ee6d9dc52c590ed176',1,'Neuron']]]
+  ['update',['update',['../classNetwork.html#ab07bb6f6d9020b9eb230551083ea929f',1,'Network::update()'],['../classNeuron.html#afb9cc7341f936c0db49ccf230c64b769',1,'Neuron::update()']]]
 ];

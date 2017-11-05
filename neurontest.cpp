@@ -63,7 +63,7 @@ TEST (NeuronTest , DelayTest)
 	n1.update(1);
 	EXPECT_EQ(1,n1.getNbSpikes());
 	EXPECT_EQ(0,n1.getPotentiel());
-	n2.receive(delay,Je);
+	n2.receive(delay,Je,G);
 	n2.update(delay);
 	EXPECT_EQ(0,n2.getPotentiel());
 	n2.update(1);
@@ -117,7 +117,7 @@ TEST (NetworkTest , rightWeights )
 	}
 	for (int i (Ne) ; i < Ne+Ni ; ++i)
 	{
-		EXPECT_EQ(test.getWeight(i),Ji);
+		EXPECT_EQ(test.getWeight(i),-Je*test.getG());
 	}
 }
 

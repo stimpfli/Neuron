@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,24 +83,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classNeuron-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Neuron Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Neuron_8hh_source.html">Neuron.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae88565006def2c1e36d6ff5c2c7a274c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#ae88565006def2c1e36d6ff5c2c7a274c">Neuron</a> (double V, double <a class="el" href="classNeuron.html#a6e18453cc704aac89fef1cc3e69ac20c">J</a>)</td></tr>
-<tr class="separator:ae88565006def2c1e36d6ff5c2c7a274c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3248dc4eb8ab1d19f8b8493c3491dbf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a3248dc4eb8ab1d19f8b8493c3491dbf5">Neuron</a> (double V, double J, double g=G)</td></tr>
+<tr class="separator:a3248dc4eb8ab1d19f8b8493c3491dbf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1eee18fc2e8bb6b5f39f727443e6930"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#ac1eee18fc2e8bb6b5f39f727443e6930">getPotentiel</a> () const </td></tr>
 <tr class="separator:ac1eee18fc2e8bb6b5f39f727443e6930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1efa405eb0cd7bac6ca012c961efe5d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#ab1efa405eb0cd7bac6ca012c961efe5d">getNbSpikes</a> () const </td></tr>
 <tr class="separator:ab1efa405eb0cd7bac6ca012c961efe5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acab9fb2615007293300080208b40d5f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#acab9fb2615007293300080208b40d5f8">update</a> (long steps, int i=0)</td></tr>
-<tr class="separator:acab9fb2615007293300080208b40d5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9cc7341f936c0db49ccf230c64b769"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#afb9cc7341f936c0db49ccf230c64b769">update</a> (long steps, int i=0, double g=G, double eta=Eta)</td></tr>
+<tr class="separator:afb9cc7341f936c0db49ccf230c64b769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3953cbc7a936c974bb93a1507dc107a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a3953cbc7a936c974bb93a1507dc107a3">displayNeuron</a> () const </td></tr>
 <tr class="separator:a3953cbc7a936c974bb93a1507dc107a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c05aa14cfa57146a609cf59d6729a28"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a3c05aa14cfa57146a609cf59d6729a28">getIExt</a> () const </td></tr>
@@ -111,8 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afedfd126ca5fb3c3371f0c81521110c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a242fda806f234c192576c34907140c27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a242fda806f234c192576c34907140c27">storeSpike</a> (std::ofstream &amp;pikeStorage, int i) const </td></tr>
 <tr class="separator:a242fda806f234c192576c34907140c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0fcacf106c3cf9d02cd1b3a19e78459"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#af0fcacf106c3cf9d02cd1b3a19e78459">receive</a> (int deliveryTime, double <a class="el" href="classNeuron.html#a6e18453cc704aac89fef1cc3e69ac20c">J</a>)</td></tr>
-<tr class="separator:af0fcacf106c3cf9d02cd1b3a19e78459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b512fa5e66521fc5455d037b8575df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#ae6b512fa5e66521fc5455d037b8575df">receive</a> (int deliveryTime, double J, double g)</td></tr>
+<tr class="separator:ae6b512fa5e66521fc5455d037b8575df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0782ae55ba365478ecb4844a85d1f7fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a0782ae55ba365478ecb4844a85d1f7fc">displayBuffer</a> (int i) const </td></tr>
 <tr class="separator:a0782ae55ba365478ecb4844a85d1f7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a320ab48e220523371b266385c650e31f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a320ab48e220523371b266385c650e31f">getJ</a> () const </td></tr>
@@ -127,57 +127,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a044cf97c24a6f465e855df50ef13d89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af519d734d92414ae4af2b1c205c896ae"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#af519d734d92414ae4af2b1c205c896ae">getTargetsize</a> ()</td></tr>
 <tr class="separator:af519d734d92414ae4af2b1c205c896ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:ac5936dd706416d5268ec11d24f5456e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#ac5936dd706416d5268ec11d24f5456e6">updatePotential</a> (double S)</td></tr>
-<tr class="separator:ac5936dd706416d5268ec11d24f5456e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08d42d3ef5c91ad5f7c9cd7d54fff714"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a08d42d3ef5c91ad5f7c9cd7d54fff714">storeSpikeTime</a> ()</td></tr>
-<tr class="separator:a08d42d3ef5c91ad5f7c9cd7d54fff714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a572f11ba08ac1fef947058ea1de86be6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a572f11ba08ac1fef947058ea1de86be6">stimule</a> ()</td></tr>
-<tr class="separator:a572f11ba08ac1fef947058ea1de86be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a36c756b0c54b9d258726d7b667feb63d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36c756b0c54b9d258726d7b667feb63d"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a36c756b0c54b9d258726d7b667feb63d">potentiel</a></td></tr>
-<tr class="memdesc:a36c756b0c54b9d258726d7b667feb63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">le potentiel du neuron <br/></td></tr>
-<tr class="separator:a36c756b0c54b9d258726d7b667feb63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a058e7be13216126efefec7891391d6df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a058e7be13216126efefec7891391d6df"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a058e7be13216126efefec7891391d6df">nbSpikes</a></td></tr>
-<tr class="memdesc:a058e7be13216126efefec7891391d6df"><td class="mdescLeft">&#160;</td><td class="mdescRight">le nombre de spike du neuron <br/></td></tr>
-<tr class="separator:a058e7be13216126efefec7891391d6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6acf3f720bf2f6bd414a6f0617c6c373"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6acf3f720bf2f6bd414a6f0617c6c373"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a6acf3f720bf2f6bd414a6f0617c6c373">tSpike</a></td></tr>
-<tr class="memdesc:a6acf3f720bf2f6bd414a6f0617c6c373"><td class="mdescLeft">&#160;</td><td class="mdescRight">le temps du dernier spike <br/></td></tr>
-<tr class="separator:a6acf3f720bf2f6bd414a6f0617c6c373"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03f92d2e014eb23e482a9894486391b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03f92d2e014eb23e482a9894486391b9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a03f92d2e014eb23e482a9894486391b9">time</a></td></tr>
-<tr class="memdesc:a03f92d2e014eb23e482a9894486391b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">le temps local du neuron <br/></td></tr>
-<tr class="separator:a03f92d2e014eb23e482a9894486391b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1557475173454c5421e7c5f039845b5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1557475173454c5421e7c5f039845b5f"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a1557475173454c5421e7c5f039845b5f">iExt</a></td></tr>
-<tr class="memdesc:a1557475173454c5421e7c5f039845b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">le courant extérieur <br/></td></tr>
-<tr class="separator:a1557475173454c5421e7c5f039845b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a046113587b8763ee6d9dc52c590ed176"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a046113587b8763ee6d9dc52c590ed176"></a>
-std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a046113587b8763ee6d9dc52c590ed176">ringBuffer</a></td></tr>
-<tr class="memdesc:a046113587b8763ee6d9dc52c590ed176"><td class="mdescLeft">&#160;</td><td class="mdescRight">le buffer circulaire <br/></td></tr>
-<tr class="separator:a046113587b8763ee6d9dc52c590ed176"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e18453cc704aac89fef1cc3e69ac20c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e18453cc704aac89fef1cc3e69ac20c"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a6e18453cc704aac89fef1cc3e69ac20c">J</a></td></tr>
-<tr class="memdesc:a6e18453cc704aac89fef1cc3e69ac20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">le poids du neuron <br/></td></tr>
-<tr class="separator:a6e18453cc704aac89fef1cc3e69ac20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cb124b468c9499ce0d718504979d609"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cb124b468c9499ce0d718504979d609"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a7cb124b468c9499ce0d718504979d609">test</a></td></tr>
-<tr class="memdesc:a7cb124b468c9499ce0d718504979d609"><td class="mdescLeft">&#160;</td><td class="mdescRight">si le neuron est mode test ou non <br/></td></tr>
-<tr class="separator:a7cb124b468c9499ce0d718504979d609"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63c7a5101d977883d77b8351af85f64f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63c7a5101d977883d77b8351af85f64f"></a>
-std::deque&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a63c7a5101d977883d77b8351af85f64f">targets</a></td></tr>
-<tr class="memdesc:a63c7a5101d977883d77b8351af85f64f"><td class="mdescLeft">&#160;</td><td class="mdescRight">le tableau de neuron auxquel notre neuron et lié <br/></td></tr>
-<tr class="separator:a63c7a5101d977883d77b8351af85f64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ae88565006def2c1e36d6ff5c2c7a274c"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represente un neurone ces caractéristiques contient notament les references aux neurones auxquel il est lié </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3248dc4eb8ab1d19f8b8493c3491dbf5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -191,7 +145,13 @@ std::deque&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>J</em>&#160;</td>
+          <td class="paramname"><em>J</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>g</em> = <code>G</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -386,7 +346,7 @@ std::deque&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 </div>
 </div>
-<a class="anchor" id="af0fcacf106c3cf9d02cd1b3a19e78459"></a>
+<a class="anchor" id="ae6b512fa5e66521fc5455d037b8575df"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -400,7 +360,13 @@ std::deque&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>J</em>&#160;</td>
+          <td class="paramname"><em>J</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -441,31 +407,6 @@ std::deque&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 </div>
 </div>
-<a class="anchor" id="a572f11ba08ac1fef947058ea1de86be6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double Neuron::stimule </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>VERIFIE SI AU MOMENT T , LE NEURON REÇOIT UN STIMULUS </p>
-<dl class="section return"><dt>Returns</dt><dd>le stimulus dans le buffer au temps t (venant des autres neurons) </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a242fda806f234c192576c34907140c27"></a>
 <div class="memitem">
 <div class="memproto">
@@ -496,30 +437,6 @@ std::deque&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="a08d42d3ef5c91ad5f7c9cd7d54fff714"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Neuron::storeSpikeTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>ENREGISTE LE TEMPS TIME EN STEPS DANS LE TEMPS DU DERNIER SPIKE LORSQUE APPELE </p>
 
 </div>
 </div>
@@ -555,7 +472,7 @@ std::deque&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 </div>
 </div>
-<a class="anchor" id="acab9fb2615007293300080208b40d5f8"></a>
+<a class="anchor" id="afb9cc7341f936c0db49ccf230c64b769"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -569,7 +486,19 @@ std::deque&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>i</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>g</em> = <code>G</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>eta</em> = <code>Eta</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -589,37 +518,6 @@ std::deque&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 </div>
 </div>
-<a class="anchor" id="ac5936dd706416d5268ec11d24f5456e6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Neuron::updatePotential </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>S</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>RESOUT L'EQUATION DIFFERENTIELLE DU POTENTIEL DE LA MEMBRANE </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">les</td><td>stimulus de l'extérieur </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Neuron_8hh_source.html">Neuron.hh</a></li>
 <li>Neuron.cpp</li>
@@ -627,7 +525,7 @@ std::deque&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 1 2017 22:52:02 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 5 2017 10:19:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

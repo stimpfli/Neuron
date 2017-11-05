@@ -1,13 +1,14 @@
 cmake_minimum_required(VERSION 2.6)
 project(Neuron)
-set(CMAKE-CXX-FLAGS "-03 -W -Wall -pedantic -std=c++11")
+set(CMAKE-CXX-FLAGS "-03 -W -Wall -std=c++11 -pedantic ")
 
 enable_testing()
 add_subdirectory(gtest)
 include_directories(${gtest_SOURCE_DIR}/include${gtest_SOURCE_DIR})
 
-add_executable (neuron Neuron.cpp Neuron.hh Neuronmain.cpp Network.cpp)
+add_executable (neuron Neuron.cpp Neuron.hh Neuronmain.cpp Network.cpp Experiment.h Experiment.cpp)
 add_executable (neurontest Neuron.hh neurontest.cpp Neuron.cpp Network.cpp)
+
 find_package(Doxygen)
 if(DOXYGEN_FOUND)
 

@@ -69,23 +69,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
-      <li><a href="functions_vars.html"><span>Variables</span></a></li>
-    </ul>
-  </div>
-  <div id="navrow4" class="tabs3">
-    <ul class="tablist">
-      <li><a href="#index_c"><span>c</span></a></li>
-      <li><a href="#index_d"><span>d</span></a></li>
-      <li><a href="#index_e"><span>e</span></a></li>
-      <li><a href="#index_g"><span>g</span></a></li>
-      <li><a href="#index_i"><span>i</span></a></li>
-      <li><a href="#index_j"><span>j</span></a></li>
-      <li><a href="#index_n"><span>n</span></a></li>
-      <li><a href="#index_p"><span>p</span></a></li>
-      <li><a href="#index_r"><span>r</span></a></li>
-      <li><a href="#index_s"><span>s</span></a></li>
-      <li><a href="#index_t"><span>t</span></a></li>
-      <li class="current"><a href="#index_u"><span>u</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -94,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,9 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
-
-<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div><ul>
 <li>connect()
 : <a class="el" href="classNeuron.html#a894c1589ac89df363631f03c5999236a">Neuron</a>
 </li>
@@ -116,29 +97,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>countConnectionI()
 : <a class="el" href="classNetwork.html#a60b033c815f3685e6fc3bb0cf244a06a">Network</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
 <li>displayBuffer()
 : <a class="el" href="classNeuron.html#a0782ae55ba365478ecb4844a85d1f7fc">Neuron</a>
 </li>
 <li>displayNeuron()
 : <a class="el" href="classNeuron.html#a3953cbc7a936c974bb93a1507dc107a3">Neuron</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
-<li>eta
-: <a class="el" href="classExperiment.html#a958e9e5263561bfeae89bbaf3d1fff67">Experiment</a>
+<li>doExperiment()
+: <a class="el" href="classExperiment.html#aa459e94575e000ced358cf84fdcf662c">Experiment</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
-<li>g
-: <a class="el" href="classExperiment.html#a465c0084fd487ceabaeef546f0a419e5">Experiment</a>
+<li>Experiment()
+: <a class="el" href="classExperiment.html#a303e6a05d99f403ff4793495a2fbff58">Experiment</a>
+</li>
+<li>getG()
+: <a class="el" href="classNetwork.html#a3d460ec1efc086465dfd9429f358c908">Network</a>
 </li>
 <li>getIExt()
 : <a class="el" href="classNeuron.html#a3c05aa14cfa57146a609cf59d6729a28">Neuron</a>
@@ -164,90 +136,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getWeight()
 : <a class="el" href="classNetwork.html#ad214f401b7ddf102fb574fbd050bf7de">Network</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
-<li>iExt
-: <a class="el" href="classNeuron.html#a1557475173454c5421e7c5f039845b5f">Neuron</a>
-</li>
-<li>initExitatory()
-: <a class="el" href="classNetwork.html#a6660b0fe73afa5bf261a5bcc6f6f81d8">Network</a>
-</li>
-<li>initInhibitory()
-: <a class="el" href="classNetwork.html#aa2cc8747377851de3fc53a5ab7d7bf54">Network</a>
-</li>
-<li>initLinks()
-: <a class="el" href="classNetwork.html#a82eecc52e44648d2f43d5380a19bcc0c">Network</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_j"></a>- j -</h3><ul>
-<li>J
-: <a class="el" href="classNeuron.html#a6e18453cc704aac89fef1cc3e69ac20c">Neuron</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
-<li>nbSpikes
-: <a class="el" href="classNeuron.html#a058e7be13216126efefec7891391d6df">Neuron</a>
-</li>
 <li>Network()
-: <a class="el" href="classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8">Network</a>
+: <a class="el" href="classNetwork.html#aa703f0c9a5b85bfcb782a347234cbf01">Network</a>
 </li>
 <li>Neuron()
-: <a class="el" href="classNeuron.html#ae88565006def2c1e36d6ff5c2c7a274c">Neuron</a>
+: <a class="el" href="classNeuron.html#a3248dc4eb8ab1d19f8b8493c3491dbf5">Neuron</a>
 </li>
-<li>neurons
-: <a class="el" href="classNetwork.html#a1b7832bc2c7b8855cdc3b2d6329eff9d">Network</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
-<li>potentiel
-: <a class="el" href="classNeuron.html#a36c756b0c54b9d258726d7b667feb63d">Neuron</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
 <li>receive()
-: <a class="el" href="classNeuron.html#af0fcacf106c3cf9d02cd1b3a19e78459">Neuron</a>
+: <a class="el" href="classNeuron.html#ae6b512fa5e66521fc5455d037b8575df">Neuron</a>
 </li>
-<li>ringBuffer
-: <a class="el" href="classNeuron.html#a046113587b8763ee6d9dc52c590ed176">Neuron</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>setIExt()
 : <a class="el" href="classNeuron.html#afedfd126ca5fb3c3371f0c81521110c1">Neuron</a>
 </li>
-<li>stimule()
-: <a class="el" href="classNeuron.html#a572f11ba08ac1fef947058ea1de86be6">Neuron</a>
-</li>
 <li>storeSpike()
 : <a class="el" href="classNeuron.html#a242fda806f234c192576c34907140c27">Neuron</a>
-</li>
-<li>storeSpikeTime()
-: <a class="el" href="classNeuron.html#a08d42d3ef5c91ad5f7c9cd7d54fff714">Neuron</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
-<li>t
-: <a class="el" href="classNetwork.html#a21a49637ac27a1080161873364c1065e">Network</a>
-</li>
-<li>targets
-: <a class="el" href="classNeuron.html#a63c7a5101d977883d77b8351af85f64f">Neuron</a>
-</li>
-<li>test
-: <a class="el" href="classNeuron.html#a7cb124b468c9499ce0d718504979d609">Neuron</a>
 </li>
 <li>testOff()
 : <a class="el" href="classNeuron.html#a4063d72fda40dd39153fc871435b9d6a">Neuron</a>
@@ -255,31 +157,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>testOn()
 : <a class="el" href="classNeuron.html#a2f26d1bc3d172c2e5319541dc64d1979">Neuron</a>
 </li>
-<li>time
-: <a class="el" href="classNeuron.html#a03f92d2e014eb23e482a9894486391b9">Neuron</a>
-</li>
-<li>transmit()
-: <a class="el" href="classNetwork.html#a7441f70fb101865b0ea475e149229edc">Network</a>
-</li>
-<li>tSpike
-: <a class="el" href="classNeuron.html#a6acf3f720bf2f6bd414a6f0617c6c373">Neuron</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
 <li>update()
 : <a class="el" href="classNetwork.html#ab07bb6f6d9020b9eb230551083ea929f">Network</a>
-, <a class="el" href="classNeuron.html#acab9fb2615007293300080208b40d5f8">Neuron</a>
-</li>
-<li>updatePotential()
-: <a class="el" href="classNeuron.html#ac5936dd706416d5268ec11d24f5456e6">Neuron</a>
+, <a class="el" href="classNeuron.html#afb9cc7341f936c0db49ccf230c64b769">Neuron</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 1 2017 22:52:03 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 5 2017 10:19:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

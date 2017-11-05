@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['receive',['receive',['../classNeuron.html#af0fcacf106c3cf9d02cd1b3a19e78459',1,'Neuron']]]
+  ['receive',['receive',['../classNeuron.html#ae6b512fa5e66521fc5455d037b8575df',1,'Neuron']]]
 ];

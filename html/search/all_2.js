@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['eta',['eta',['../classExperiment.html#a958e9e5263561bfeae89bbaf3d1fff67',1,'Experiment']]],
-  ['experiment',['Experiment',['../classExperiment.html',1,'']]]
+  ['experiment',['Experiment',['../classExperiment.html',1,'Experiment'],['../classExperiment.html#a303e6a05d99f403ff4793495a2fbff58',1,'Experiment::Experiment()']]]
 ];

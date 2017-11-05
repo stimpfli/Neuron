@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['g',['g',['../classExperiment.html#a465c0084fd487ceabaeef546f0a419e5',1,'Experiment']]],
+  ['getg',['getG',['../classNetwork.html#a3d460ec1efc086465dfd9429f358c908',1,'Network']]],
   ['getiext',['getIExt',['../classNeuron.html#a3c05aa14cfa57146a609cf59d6729a28',1,'Neuron']]],
   ['getj',['getJ',['../classNeuron.html#a320ab48e220523371b266385c650e31f',1,'Neuron']]],
   ['getnbspikes',['getNbSpikes',['../classNeuron.html#ab1efa405eb0cd7bac6ca012c961efe5d',1,'Neuron']]],

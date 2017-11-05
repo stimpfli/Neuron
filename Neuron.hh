@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include <deque>
+//#include <deque>
 
 
 //CONSTANTES
@@ -18,8 +19,8 @@ const double Ni (2500);//nbNeuron
 const double Ci (Ni/10);//nbConnection
 const double Ce (Ne/10);//nbConnection
 const double Je (0.1);//mV
-const double g (5);
-const double Ji (-Je*g);//mV
+const double G (5);
+//const double Ji (-Je*g);//mV
 const double Taue(20);//ms
 const double R(20);//G Ohm
 const double tStart(0);//ms
@@ -29,13 +30,17 @@ const double Taurps(2.0);//ms
 const long refractorySteps(Taurps/h);//steps
 const double Eta(2);
 const double NuThr (Teta/(Ce*Je*Taue)); //1/ms
-const double NuExt(Eta*Ce*NuThr); //1/ms
-const double Lambda (NuExt*h);//1/steps
+//const double NuExt(Eta*Ce*NuThr); //1/ms
+//const double Lambda (NuExt*h);//1/steps
 
 
 
 //CLASSES:
- 
+/**
+ * Represente un neurone ces caractéristiques 
+ * son potentiel son temps propre ses connections ect..
+ **/
+
 class Neuron 
 {
 	private:
@@ -58,16 +63,16 @@ class Neuron
 		
 	public:
 	
-	Neuron (double V , double J );
+	Neuron (double V , double J, double g = G );
 	double getPotentiel() const ;
 	int getNbSpikes () const;
-	bool update (long steps , int i =0 ) ;
+	bool update (long steps , int i = 0,double g = G, double eta = Eta ) ;
 	void displayNeuron() const ;
 	double getIExt ()const;
 	double getTSpike() const;
 	void setIExt(double I);
 	void storeSpike (std::ofstream& pikeStorage, int i )const;
-	void receive(int deliveryTime , double J);
+	void receive(int deliveryTime , double J, double g);
 	void displayBuffer (int i)const;
 	double getJ()const;
 	void testOn();
