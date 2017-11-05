@@ -22,7 +22,7 @@ const double Je (0.1);//mV
 const double G (5);
 //const double Ji (-Je*g);//mV
 const double Taue(20);//ms
-const double R(20);//G Ohm
+const double R(20);//GOhm
 const double tStart(0);//ms
 const double TStop(1000);//ms
 const double Teta(20);//mV
