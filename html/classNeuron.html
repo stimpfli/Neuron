@@ -129,7 +129,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af519d734d92414ae4af2b1c205c896ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represente un neurone ces caractéristiques son potentiel son temps propre ses connections ect.. </p>
+<div class="textblock"><p>Modelize a <a class="el" href="classNeuron.html">Neuron</a> and all his caracteristics his potentiel all his targets the time of the last spike ... </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3248dc4eb8ab1d19f8b8493c3491dbf5"></a>
 <div class="memitem">
@@ -160,10 +160,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>INITIALISE LE TEMPS DU NEURON ET MET LE TEMPS DU 1ER SPIKE 0 INITIALISE LE BUFFER A SA TAILLE REMPLIS DE 0 </p>
+<p>Initialize the time of the neuron and set the time of the last spike to zero Initialize the ringbuffer with 0 and the size </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Le</td><td>voltage intitial et le J du neurone (Je ou Ji) </td></tr>
+    <tr><td class="paramname">the</td><td>initial potentiel </td></tr>
+    <tr><td class="paramname">the</td><td>J of the neuron (Je or Ji) </td></tr>
   </table>
   </dd>
 </dl>
@@ -184,10 +185,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Connecte le neuron au neuronI </p>
+<p>Connect the neuron to neuron i </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Le</td><td>numero du neuron connecté a this </td></tr>
+    <tr><td class="paramname">the</td><td>neuron i </td></tr>
   </table>
   </dd>
 </dl>
@@ -207,7 +208,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>AFFICHE SUR LE TEMINAL LE BUFFER ET TOUT CE QU'IL CONTIENT </p>
+<p>display the buffer and his content </p>
 
 </div>
 </div>
@@ -223,7 +224,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>AFFICHE SUR LE TERMINAL LE NEURON : SON POTENTIEL </p>
+<p>display on the terminal the neron : his potential </p>
 
 </div>
 </div>
@@ -239,7 +240,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>l'intensité du courant </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the external courant </dd></dl>
 
 </div>
 </div>
@@ -255,7 +256,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>le J du neuron (Ji ou Je) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the J of the neuron Je or Ji </dd></dl>
 
 </div>
 </div>
@@ -271,7 +272,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>le nb de spikes </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of spikes </dd></dl>
 
 </div>
 </div>
@@ -290,11 +291,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">la</td><td>i eme place dans le tableau de connection </td></tr>
+    <tr><td class="paramname">the</td><td>place i in the vector of target </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>le numero du neuron correpondant a la connection connectionNum </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the index of the neuron corresponding to place i </dd></dl>
 
 </div>
 </div>
@@ -310,7 +311,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>le potentiel membranaire </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the membrane potential </dd></dl>
 
 </div>
 </div>
@@ -326,7 +327,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>la taille du vecteur de connection </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the size of the vector of connection </dd></dl>
 
 </div>
 </div>
@@ -342,7 +343,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>le temps réel du dernier spike </dd></dl>
+<p>the real time (ms) of the last spike </p>
 
 </div>
 </div>
@@ -375,10 +376,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>GERE LA RECEPTION DU STIMULUS ET ENREGISTRE DANS LE BUFFER CE DERNIER </p>
+<p>manage the reception of the spike </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">le</td><td>moment ou ce spike doit etre transmit et le poids de ce dernier </td></tr>
+    <tr><td class="paramname">the</td><td>delivery time of the stimulation </td></tr>
+    <tr><td class="paramname">the</td><td>J of the neuron that transmit the spike </td></tr>
+    <tr><td class="paramname">the</td><td>g choosen in the experiment class </td></tr>
   </table>
   </dd>
 </dl>
@@ -400,7 +403,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">l'intensité</td><td>que l'on veut soumettre au neuron </td></tr>
+    <tr><td class="paramname">The</td><td>intensity of the courant you want to apply to the neuron </td></tr>
   </table>
   </dd>
 </dl>
@@ -430,10 +433,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>ECRIS TOUTE LES VALEURS DANS LE DOSSIER PASSER EN PARAM ECRIS A COTÉ LE NUMÉROS ASSOCIÉ AU NEURON </p>
+<p>write into the file the time of the neuron write the number of the neuron </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">un</td><td>stream vers un fichier </td></tr>
+    <tr><td class="paramname">the</td><td>stream to the file </td></tr>
   </table>
   </dd>
 </dl>
@@ -452,7 +455,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>sors le neuron du mode test </p>
+<p>set the test mode of </p>
 
 </div>
 </div>
@@ -468,7 +471,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Passe le neuron en mode test </p>
+<p>Set the test mode on </p>
 
 </div>
 </div>
@@ -507,7 +510,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>ITÈRE SUR LE NOMBRE DE STEPS VERIFIE LES STIMULUS EXTERNE SI EN MODE TEST , STIMULATION DE L'EXTERIEUR DE LA SIMULATION NE SONT PAS PRIS EN COMPTE (VOIR GOOGLE TEST) SI LE POTENTIEL DEPASSE THETA ( VREFRACTORY ): STORE LE TEMPS DU DERNIER SPIKE INCREMENTE COMPTEUR DE SPIKE MET LE BOOL A TRUE SI IL Y A EU UN SPIKE AVANT ETT QUE L'ON SE TROUVE DANS LE REFRACTORY TIME: MAINTIENT LE POTENTIEL A 0 mV SINON: MODIFIE LA VALEUR DU POTENTIEL AUGMENTE LES STEPS DE SIMULATION DE 1 </p>
+<p>itarate on the numer of steps collect the external stimulus ,if in test mode no poisson distribution (external stimulation) if the potential pass theta ( set the potential to Vref): store the time of the last spike add one to the number of spikes set te bool to true if the neuron spiked and you are during the refractory period: maintain the potential to Vref else: change the value of the membrane potential add one to the number of steps </p>
 <dl class="section return"><dt>Returns</dt><dd>true si le neuron a spiké </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -525,7 +528,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 5 2017 14:06:21 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 6 2017 21:11:06 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

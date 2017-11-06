@@ -62,20 +62,31 @@ TEST (NeuronTest , DelayTest)
 	EXPECT_EQ(0,n1.getNbSpikes());
 	n1.update(1);
 	EXPECT_EQ(1,n1.getNbSpikes());
-	EXPECT_EQ(0,n1.getPotentiel());
+	EXPECT_EQ(Vref,n1.getPotentiel());
 	n2.receive(delay,Je,G);
 	n2.update(delay);
-	EXPECT_EQ(0,n2.getPotentiel());
+	EXPECT_EQ(Vref,n2.getPotentiel());
 	n2.update(1);
-	EXPECT_EQ(0.1,n2.getPotentiel());
+	EXPECT_GT(n2.getPotentiel(),Vref);
 }
 
-TEST (NeuronTest , ExternalCurrentTest )
+TEST (NeuronTest , RefractoryPeriod)
+{
+	Neuron neuron (0,0.1);
+		neuron.setIExt(1.01);
+		neuron.testOn();
+		neuron.update(924+refractorySteps);
+		ASSERT_EQ (neuron.getPotentiel(),Vref);
+		neuron.update(1);
+		ASSERT_GT(neuron.getPotentiel(),Vref);
+}
+
+TEST (NeuronTest , ExternalCurrentTestPoisson )
 {
 	Neuron neuron (0,Je);
 	neuron.setIExt(0);
 	neuron.update(924);
-	EXPECT_GT(neuron.getNbSpikes(),0);
+	ASSERT_GT(neuron.getNbSpikes(),0);
 }
 
 TEST (NetworkTest , CiInhibitoryConnection )

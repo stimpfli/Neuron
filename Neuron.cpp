@@ -9,9 +9,10 @@ std::ofstream pikeStorageout("pikeStorage.dat",/*std::ios::app,*/std::ios::trunc
 
 //CONSTRUCTEUR 
 /**
- * INITIALISE LE TEMPS DU NEURON ET MET LE TEMPS DU 1ER SPIKE 0
- * INITIALISE LE BUFFER A SA TAILLE REMPLIS DE 0
- *@param Le voltage intitial et le J du neurone (Je ou Ji)
+ * Initialize the time of the neuron and set the time of the last spike to zero 
+ * Initialize the ringbuffer with 0 and the size 
+ * @param the initial potentiel
+ * @param the J of the neuron (Je or Ji)
  */
 Neuron:: Neuron (double V , double J, double g )
 :potentiel (V),nbSpikes(0),tSpike(0),time(tStart),iExt(0), ringBuffer(DelaySteps+1,0) ,J(J) , test(false)
@@ -20,16 +21,16 @@ Neuron:: Neuron (double V , double J, double g )
 	assert (J == Je or J == Ji);
 }
 /**
- * ECRIS TOUTE LES VALEURS DANS LE DOSSIER PASSER EN PARAM
- * ECRIS A COTÉ LE NUMÉROS ASSOCIÉ AU NEURON
- * @param un stream vers un fichier
+ * write into the file the time of the neuron 
+ * write the number of the neuron 
+ * @param the stream to the file 
  */
 void Neuron:: storeSpike (std::ofstream& pikeStorage , int i)const
 {	
 	pikeStorage<<time*h<<"	"<<i<<'\n';
 }
 /**
- * @return le nb de spikes
+ * @return the number of spikes
  */
 int Neuron:: getNbSpikes () const
 {
@@ -37,24 +38,24 @@ int Neuron:: getNbSpikes () const
 }
 
 /**
- * @return le potentiel membranaire
+ * @return the membrane potential
  */
 double Neuron:: getPotentiel()const
 {
 	return potentiel;
 }
 /**
- * ITÈRE SUR LE NOMBRE DE STEPS 
- * VERIFIE LES STIMULUS EXTERNE SI EN MODE TEST , STIMULATION DE L'EXTERIEUR DE LA SIMULATION NE SONT PAS PRIS EN COMPTE (VOIR GOOGLE TEST)
- * SI LE POTENTIEL DEPASSE THETA ( VREFRACTORY ):
-	*  STORE LE TEMPS DU DERNIER SPIKE
-	* INCREMENTE COMPTEUR DE SPIKE 
-	* MET LE BOOL A TRUE 
- * SI IL Y A EU UN SPIKE AVANT ETT QUE L'ON SE TROUVE DANS LE REFRACTORY TIME:
-	* MAINTIENT LE POTENTIEL A 0 mV 
- * SINON:
-	* 	MODIFIE LA VALEUR DU POTENTIEL 
- *AUGMENTE LES STEPS DE SIMULATION DE 1
+ * itarate on the numer of steps 
+ * collect the external stimulus ,if in test mode no poisson distribution (external stimulation)
+ * if the potential pass theta ( set the potential to Vref):
+	* store the time of the last spike
+	* add one to the number of spikes
+	* set te bool to true 
+ * if the neuron spiked and you are during the refractory period:
+	* maintain the potential to Vref
+ * else:
+	* 	change the value of the membrane potential
+ * add one to the number of steps
  * @return true si le neuron a spiké
  * @param la position du neuron dans le cortex (simulation) , le nombre de steps
  */
@@ -78,9 +79,7 @@ bool Neuron:: update (long steps , int i,double g, double eta )
 		if(!test)
 		{
 			stimulus = stimule() + Je * poisson(gen)  ;
-		
 		}
-		
 		else 
 		{
 			stimulus = stimule();
@@ -91,18 +90,15 @@ bool Neuron:: update (long steps , int i,double g, double eta )
 			storeSpikeTime();
 			++nbSpikes;
 			spikes = true;
-		storeSpike(pikeStorageout,i);
-		
+			storeSpike(pikeStorageout,i);
 		}
 		if (tSpike > 0 and time - tSpike < refractorySteps )
 		{
-			potentiel = 0;	
-
+			potentiel = Vref;	
 		}	
 		else 
 		{
 			updatePotential(stimulus);
-
 		}
 	
 		++time;
@@ -112,8 +108,8 @@ bool Neuron:: update (long steps , int i,double g, double eta )
 }
 
 /**
- * RESOUT L'EQUATION DIFFERENTIELLE DU POTENTIEL DE LA MEMBRANE 
- * @param les stimulus de l'extérieur 
+ *rResolve the differetnial equation of the neuron
+ * @param the extarnal stimulus
  */
 void Neuron:: updatePotential (double S)
 {
@@ -122,8 +118,8 @@ void Neuron:: updatePotential (double S)
 }
 
 /**
- * AFFICHE SUR LE TERMINAL LE NEURON :
-	* SON POTENTIEL 
+ * display on the terminal the neron :
+	* his potential
  */
 void Neuron:: displayNeuron() const
 {
@@ -132,14 +128,14 @@ void Neuron:: displayNeuron() const
 }
 
 /**
- * ENREGISTE LE TEMPS TIME EN STEPS DANS LE TEMPS DU DERNIER SPIKE LORSQUE APPELE 
+ * Store the time in tSpike 
  */
 void Neuron:: storeSpikeTime ()
 {
 	tSpike = time;
 }
 /**
- * @return l'intensité du courant 
+ * @return the external courant 
  */
 double Neuron:: getIExt ()const
 {
@@ -147,7 +143,7 @@ double Neuron:: getIExt ()const
 }
 
 /**
- * @param l'intensité que l'on veut soumettre au neuron 
+ * @param The intensity of the courant you want to apply to the neuron 
  */
 void Neuron:: setIExt(double I)
 {
@@ -155,15 +151,17 @@ void Neuron:: setIExt(double I)
 }
 
 /**
- * @return le temps réel du dernier spike
+ * @returnreturn the real time (ms) of the last spike 
  */
  double Neuron:: getTSpike() const
 {
 	return tSpike*h;
 }
 /**
- * GERE LA RECEPTION DU STIMULUS ET ENREGISTRE DANS LE BUFFER CE DERNIER
- * @param le moment ou ce spike doit etre transmit et le poids de ce dernier 
+ * manage the reception of the spike 
+ * @param the delivery time of the stimulation 
+ * @param the J of the neuron that transmit the spike
+ * @param the g choosen in the experiment class
  */
 void Neuron:: receive(int deliveryTime, double J, double g)
 {
@@ -173,8 +171,8 @@ void Neuron:: receive(int deliveryTime, double J, double g)
 }
 
 /**
- * VERIFIE SI AU MOMENT T , LE NEURON REÇOIT UN STIMULUS
- * @return le stimulus dans le buffer au temps t (venant des autres neurons)
+ * check if at the time t the neuron have to receive a spike
+ * @return the stimulus present in the buffer 
  */
 double Neuron::stimule()
 {
@@ -188,7 +186,7 @@ double Neuron::stimule()
 }
 
 /**
- * AFFICHE SUR LE TEMINAL LE BUFFER ET TOUT CE QU'IL CONTIENT 
+ * display the buffer and his content 
  */
 void Neuron:: displayBuffer (int n)const
 {	
@@ -197,7 +195,7 @@ void Neuron:: displayBuffer (int n)const
 }
 
 /**
- *@return le J du neuron (Ji ou Je) 
+ *@return the J of the neuron Je or Ji  
  */
 double Neuron:: getJ() const
 {
@@ -205,7 +203,7 @@ double Neuron:: getJ() const
 }
 
 /**
- * Passe le neuron en mode test 
+ * Set the test mode on  
  */
 void Neuron:: testOn()
 {
@@ -213,7 +211,7 @@ void Neuron:: testOn()
 }
 
 /**
- * sors le neuron du mode test 
+ * set the test mode of 
  */
 void Neuron:: testOff()
 {
@@ -221,8 +219,8 @@ void Neuron:: testOff()
 }
 
 /**
- * Connecte le neuron au neuronI
- * @param Le numero du neuron connecté a this 
+ * Connect the neuron to neuron i
+ * @param the neuron i
  **/
  
 void Neuron:: connect(size_t numNeuron)
@@ -232,8 +230,8 @@ void Neuron:: connect(size_t numNeuron)
 }
 
 /**
- * @param la i eme place dans le tableau de connection
- * @return le numero du neuron correpondant a la connection connectionNum
+ * @param the place i in the vector of target 
+ * @return the index of the neuron corresponding to place i
  **/
  
 int Neuron:: getNeuronNum(size_t connectionNum)
@@ -243,7 +241,7 @@ int Neuron:: getNeuronNum(size_t connectionNum)
 }
 
 /**
- * @return la taille du vecteur de connection 
+ * @return the size of the vector of connection 
  */
 size_t Neuron:: getTargetsize()
 {

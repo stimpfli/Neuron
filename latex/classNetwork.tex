@@ -23,7 +23,7 @@ double \hyperlink{classNetwork_a3d460ec1efc086465dfd9429f358c908}{get\-G} ()
 
 
 \subsection{Detailed Description}
-La classe represente un réseau , tous les neurones qu'il contient et le temps spécifique il initialise le réseau entre neurones et crée les neurones 
+modelize a network ,contain\-: all neurons of the network the global time initialise the links between neurons create the neurons 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{classNetwork_aa703f0c9a5b85bfcb782a347234cbf01}{\index{Network@{Network}!Network@{Network}}
@@ -34,7 +34,7 @@ La classe represente un réseau , tous les neurones qu'il contient et le temps s
 \item[{double}]{eta = {\ttfamily Eta}}
 \end{DoxyParamCaption}
 )}}\label{classNetwork_aa703f0c9a5b85bfcb782a347234cbf01}
-C\-O\-N\-S\-T\-R\-U\-I\-T L\-E\-S L\-I\-E\-N\-S E\-N\-T\-R\-E L\-E\-S N\-E\-U\-R\-O\-N\-E\-S C\-O\-N\-S\-T\-R\-U\-I\-T T\-O\-U\-S L\-E\-S N\-E\-U\-R\-O\-N\-E\-S D\-E L\-A S\-I\-M\-U\-L\-A\-T\-I\-O\-N 
+implement the links between the neuron Build all neuron of the simulation 
 
 \subsection{Member Function Documentation}
 \hypertarget{classNetwork_a6bdbcfb84eeba497bcab661f39d7bc6f}{\index{Network@{Network}!count\-Connection\-E@{count\-Connection\-E}}
@@ -46,11 +46,11 @@ C\-O\-N\-S\-T\-R\-U\-I\-T L\-E\-S L\-I\-E\-N\-S E\-N\-T\-R\-E L\-E\-S N\-E\-U\-R
 )}}\label{classNetwork_a6bdbcfb84eeba497bcab661f39d7bc6f}
 
 \begin{DoxyParams}{Parameters}
-{\em le} & neuron i a observer \\
+{\em the} & id of the neuron to observe \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-le nombre de connection excitatrice au neuron i 
+the number of excitatory neuron connected to neuron num\-Neuron 
 \end{DoxyReturn}
 \hypertarget{classNetwork_a60b033c815f3685e6fc3bb0cf244a06a}{\index{Network@{Network}!count\-Connection\-I@{count\-Connection\-I}}
 \index{count\-Connection\-I@{count\-Connection\-I}!Network@{Network}}
@@ -61,11 +61,11 @@ le nombre de connection excitatrice au neuron i
 )}}\label{classNetwork_a60b033c815f3685e6fc3bb0cf244a06a}
 
 \begin{DoxyParams}{Parameters}
-{\em le} & neuron i a observer \\
+{\em the} & id of the neuron to observe \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-le nombre de connection inhibitrice au neuron i 
+the number of inhibitory neuron connected to neuron num\-Neuron 
 \end{DoxyReturn}
 \hypertarget{classNetwork_a3d460ec1efc086465dfd9429f358c908}{\index{Network@{Network}!get\-G@{get\-G}}
 \index{get\-G@{get\-G}!Network@{Network}}
@@ -75,7 +75,7 @@ le nombre de connection inhibitrice au neuron i
 \end{DoxyParamCaption}
 )}}\label{classNetwork_a3d460ec1efc086465dfd9429f358c908}
 \begin{DoxyReturn}{Returns}
-Le paramètre g de la simulation 
+The parameter g of the simulation 
 \end{DoxyReturn}
 \hypertarget{classNetwork_ad214f401b7ddf102fb574fbd050bf7de}{\index{Network@{Network}!get\-Weight@{get\-Weight}}
 \index{get\-Weight@{get\-Weight}!Network@{Network}}
@@ -86,11 +86,11 @@ Le paramètre g de la simulation
 )}}\label{classNetwork_ad214f401b7ddf102fb574fbd050bf7de}
 
 \begin{DoxyParams}{Parameters}
-{\em le} & neuron i dont on veut savoir le poid \\
+{\em the} & neuron you want to know the J \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-le poid associé au neuron i 
+The J of the neuron 
 \end{DoxyReturn}
 \hypertarget{classNetwork_ab07bb6f6d9020b9eb230551083ea929f}{\index{Network@{Network}!update@{update}}
 \index{update@{update}!Network@{Network}}
@@ -99,7 +99,7 @@ le poid associé au neuron i
 {}
 \end{DoxyParamCaption}
 )}}\label{classNetwork_ab07bb6f6d9020b9eb230551083ea929f}
-D\-I\-R\-I\-G\-E T\-O\-U\-T\-E L\-A S\-I\-M\-U\-L\-A\-T\-I\-O\-N A T\-R\-A\-V\-E\-R\-S T\-O\-U\-S L\-E\-S N\-E\-U\-R\-O\-N\-E\-S appelle transmit qui gère la transmition du spike aux autres neurones connecté appelle store spike qui va enregistrer le temps et le numéros du neuron 
+Run the main simulation Call transmit 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 

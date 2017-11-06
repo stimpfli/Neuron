@@ -6,7 +6,7 @@
 #include <vector>
 #include <string>
 #include <deque>
-//#include <deque>
+
 
 
 //CONSTANTES
@@ -37,22 +37,22 @@ const double NuThr (Teta/(Ce*Je*Taue)); //1/ms
 
 //CLASSES:
 /**
- * Represente un neurone ces caractéristiques 
- * son potentiel son temps propre ses connections ect..
+ * Modelize a Neuron and all his caracteristics
+ * his potentiel all his targets the time of the last spike ...
  **/
 
 class Neuron 
 {
 	private:
-	double potentiel;  ///< le potentiel du neuron
-	int nbSpikes;	   ///< le nombre de spike du neuron
-	long tSpike;	   ///< le temps du dernier spike 
-	int time;		   ///< le temps local du neuron
-	double iExt;	   ///< le courant extérieur 
-	std::vector<double> ringBuffer ; ///< le buffer circulaire
-	double J;		   ///< le poids du neuron 
-	bool test;		   ///< si le neuron est mode test ou non 
-	std::deque <int> targets; ///< le tableau de neuron auxquel notre neuron et lié 
+	double potentiel;  ///< The neurons potential
+	int nbSpikes;	   ///< The number of spike of the neuron 
+	long tSpike;	   ///< The time of the last spike 
+	int time;		   ///< The local time of the neuron
+	double iExt;	   ///< The external courant 
+	std::vector<double> ringBuffer ; ///< The circular buffer 
+	double J;		   ///< The weight of the connection going out of the neuron 
+	bool test;		   ///< If the neuron is in test mode or not 
+	std::deque <int> targets; ///< The table of neuron which you our neuron is connected to 
 	
 	void updatePotential (double S);
 	void storeSpikeTime ();

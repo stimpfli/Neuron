@@ -3,16 +3,15 @@
 
 #include "Network.h"
 /**
- * Crée l'experience demande différente constante pour créel'éxperience 
- * de notre choix 
- * parametres g et eta modifiables
+ * Créate the experiment 
+ * Contain g and eta 
 
  **/
 class Experiment 
 {
 	private:
-	double g;    ///< g one parameter of the experiment
-	double eta; ///< eta the other parameter of the experiment 
+	double g;    ///< The parameter g of the experiment 
+	double eta; ///<  The parameter eta of the experiment 
 	void askParameters ();
 	
 	public:

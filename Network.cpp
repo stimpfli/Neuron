@@ -9,12 +9,12 @@ const double StepStop (TStop/h);
 
 //CONSTRUCTEUR
 /**
- * CONSTRUIT LES LIENS ENTRE LES NEURONES  
- * CONSTRUIT TOUS LES NEURONES DE LA SIMULATION 
+ * implement the links between the neuron
+ * Build all neuron of the simulation
  */
 
 Network:: Network (double g, double eta)
- : t(0) , eta(eta), g(g)//, links (NbNeur)
+ : t(0) , eta(eta), g(g)
 {
 	initExitatory();
 	initInhibitory();
@@ -24,10 +24,9 @@ Network:: Network (double g, double eta)
 }
 
 /**
- * DIRIGE TOUTE LA SIMULATION A TRAVERS TOUS LES NEURONES
- * appelle transmit qui gère la transmition du spike aux autres neurones connecté
- * appelle store spike qui va enregistrer le temps et le numéros du neuron
- */
+ * Run the main simulation 
+ * Call transmit 
+ **/
 void Network:: update()
 {
 
@@ -48,8 +47,8 @@ void Network:: update()
 }
 
 /**
- * parcours le deque de connection du neuron i et transmet le spike
- * @param le nombre du neuron qui transmet 
+ * Transmit the last spike to all connected neuron 
+ * @param the id of the neuron that transmit
  */
 void Network::transmit(size_t i)
 {
@@ -60,7 +59,7 @@ void Network::transmit(size_t i)
 }
 
 /**
- *initialise tous les neurones excitateur
+ * Initialize the excitatory neuron 
  */
 void Network:: initExitatory()
 {
@@ -72,7 +71,7 @@ void Network:: initExitatory()
 }
 
 /**
- * initialise tous les neurones inhibiteur
+ * Initialize the inhibitory neuron 
  */
 void Network:: initInhibitory()
 {
@@ -86,7 +85,7 @@ void Network:: initInhibitory()
 }
 
 /**
- * genere aléatoirement des liens etre les neurones avec 10% de connection
+ * Generate randomly the links between Neuron
  */
 void Network:: initLinks()
 {
@@ -112,20 +111,10 @@ void Network:: initLinks()
 	std::cout<<"hello"<<std::endl;
 
 }
-/*
- * connecte le neuron a au neuron b
- * @param l'indice du neuron a 
- * @param l'indice du neuron b
- 
-void Network:: connect (size_t idA ,size_t idB)
-{
-	assert(idA <  links.size());
-	links[idA].push_back(idB);
-}*/
 
 /**
- * @param le neuron i a observer
- * @return le nombre de connection excitatrice au neuron i
+ * @param the id of the neuron to observe
+ * @return the number of excitatory neuron connected to neuron numNeuron
  */
 double Network:: countConnectionE (int numNeuron)
 {
@@ -143,8 +132,8 @@ return connections ;
 }
 
 /**
- * @param le neuron i a observer
- * @return le nombre de connection inhibitrice au neuron i
+ * @param the id of the neuron to observe
+ * @return the number of inhibitory neuron connected to neuron numNeuron
  */
 double Network:: countConnectionI (int numNeuron) 
 {
@@ -163,8 +152,8 @@ return connections ;
 }
 
 /**
- * @param le neuron i dont on veut savoir le poid 
- * @return le poid associé au neuron i
+ * @param the neuron you want to know the J
+ * @return The J of the neuron 
  */
 double Network:: getWeight (int numNeuron)
 {
@@ -172,7 +161,7 @@ double Network:: getWeight (int numNeuron)
 }
 
 /**
- * @return Le paramètre g de la simulation 
+ * @return The parameter g of the simulation  
  **/
 double Network:: getG ()
 {

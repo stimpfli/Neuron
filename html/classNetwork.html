@@ -107,7 +107,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3d460ec1efc086465dfd9429f358c908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>La classe represente un réseau , tous les neurones qu'il contient et le temps spécifique il initialise le réseau entre neurones et crée les neurones </p>
+<div class="textblock"><p>modelize a network ,contain: all neurons of the network the global time initialise the links between neurons create the neurons </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa703f0c9a5b85bfcb782a347234cbf01"></a>
 <div class="memitem">
@@ -132,7 +132,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>CONSTRUIT LES LIENS ENTRE LES NEURONES CONSTRUIT TOUS LES NEURONES DE LA SIMULATION </p>
+<p>implement the links between the neuron Build all neuron of the simulation </p>
 
 </div>
 </div>
@@ -152,11 +152,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">le</td><td>neuron i a observer </td></tr>
+    <tr><td class="paramname">the</td><td>id of the neuron to observe </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>le nombre de connection excitatrice au neuron i </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of excitatory neuron connected to neuron numNeuron </dd></dl>
 
 </div>
 </div>
@@ -175,11 +175,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">le</td><td>neuron i a observer </td></tr>
+    <tr><td class="paramname">the</td><td>id of the neuron to observe </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>le nombre de connection inhibitrice au neuron i </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of inhibitory neuron connected to neuron numNeuron </dd></dl>
 
 </div>
 </div>
@@ -195,7 +195,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Le paramètre g de la simulation </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The parameter g of the simulation </dd></dl>
 
 </div>
 </div>
@@ -214,11 +214,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">le</td><td>neuron i dont on veut savoir le poid </td></tr>
+    <tr><td class="paramname">the</td><td>neuron you want to know the J </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>le poid associé au neuron i </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The J of the neuron </dd></dl>
 
 </div>
 </div>
@@ -234,7 +234,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>DIRIGE TOUTE LA SIMULATION A TRAVERS TOUS LES NEURONES appelle transmit qui gère la transmition du spike aux autres neurones connecté appelle store spike qui va enregistrer le temps et le numéros du neuron </p>
+<p>Run the main simulation Call transmit </p>
 
 </div>
 </div>
@@ -245,7 +245,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 5 2017 14:06:21 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 6 2017 21:11:06 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
