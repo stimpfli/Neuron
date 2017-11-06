@@ -12,5 +12,5 @@ pl.show();
 
 n,bins,patches = pl.hist(data1[0],50,normed = 0 , alpha = 0.75)
 pl.xlabel('Time (ms)')
-pl.ylabel('number of neuron spiking')
+pl.ylabel(u'Rate (Hz)')
 pl.show(); 

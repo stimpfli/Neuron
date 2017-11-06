@@ -50,16 +50,6 @@ CMAKE_BINARY_DIR = /home/INTRANET/stimpfli/myfiles/cpp/Neuron
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -243,6 +233,30 @@ gtest_main/fast:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+Experiment.o: Experiment.cpp.o
+.PHONY : Experiment.o
+
+# target to build an object file
+Experiment.cpp.o:
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Experiment.cpp.o
+.PHONY : Experiment.cpp.o
+
+Experiment.i: Experiment.cpp.i
+.PHONY : Experiment.i
+
+# target to preprocess a source file
+Experiment.cpp.i:
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Experiment.cpp.i
+.PHONY : Experiment.cpp.i
+
+Experiment.s: Experiment.cpp.s
+.PHONY : Experiment.s
+
+# target to generate assembly for a file
+Experiment.cpp.s:
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Experiment.cpp.s
+.PHONY : Experiment.cpp.s
+
 Network.o: Network.cpp.o
 .PHONY : Network.o
 
@@ -351,7 +365,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... neuron"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
@@ -365,6 +378,9 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... Experiment.o"
+	@echo "... Experiment.i"
+	@echo "... Experiment.s"
 	@echo "... Network.o"
 	@echo "... Network.i"
 	@echo "... Network.s"

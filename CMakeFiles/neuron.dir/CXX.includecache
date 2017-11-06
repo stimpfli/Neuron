@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Experiment.cpp
+Experiment.h
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Experiment.h
+iostream
+-
+limits
+-
+
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Experiment.h
+Network.h
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.h
+
 /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.cpp
 Network.h
 /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.h
@@ -18,6 +30,8 @@ cassert
 
 /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.h
 vector
+-
+array
 -
 Neuron.hh
 /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuron.hh
@@ -49,6 +63,6 @@ deque
 -
 
 /home/INTRANET/stimpfli/myfiles/cpp/Neuron/Neuronmain.cpp
-Network.h
-/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Network.h
+Experiment.h
+/home/INTRANET/stimpfli/myfiles/cpp/Neuron/Experiment.h
 
