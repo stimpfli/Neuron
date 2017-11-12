@@ -52,9 +52,11 @@ void Network:: update()
  */
 void Network::transmit(size_t i)
 {
-	for (size_t j (0); j < neurons[i].getTargetsize() ;++j)
+	Neuron ni (neurons[i]);
+	size_t size ( ni.getTargetsize());
+	for (size_t j (0); j < size ;++j)
 				{
-					neurons[neurons[i].getNeuronNum(j)].receive(DelaySteps+t,neurons[i].getJ(),g);
+					neurons[ni.getNeuronNum(j)].receive(DelaySteps+t,ni.getJ(),g);
 }
 }
 
